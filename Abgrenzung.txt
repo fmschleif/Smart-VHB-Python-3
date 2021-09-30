@@ -1,4 +1,4 @@
-sätzliche didaktischen Abgrenzung:
+Grundsätzliche didaktischen Abgrenzung:
 Die Zielgruppe der Lerneinheiten (LE) von Prof. Dr. Barkowsky und die Zielgruppe unserer LE´n ist grundsätzlich disjunkt.
 Die von Ihm vorgeschlagenen LE´n zielen auf ein Publikum ab, das grundsätzlich wenig bis keine Kenntnisse
 im Bereich Programmierung hat. Daher ist die Wissensvermittlung und die Einführung von Begriffen eine andere.
