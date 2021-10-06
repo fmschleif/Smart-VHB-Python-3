@@ -1,7 +1,7 @@
 %%html
 
 <script>
-var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();
+var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[20])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[20])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();
 </script>
 Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); return false;" >hier</a>.
 
@@ -15,15 +15,15 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 <b>Frage 1.
 
-<br>Welche Funktion hängt eine Liste an eine weitere ohne diese aufzulösen?<br></b>
+<br>Welche der folgenden Aussagen stimmt über Funktionen?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q1" value="extend">extend()<br>
+<input type="radio" name="q1" value="first">Funktionen können mehrere Eingaben und Ausgaben haben.<br>
 
-<input type="radio" name="q1" value="append">append()<br>
+<input type="radio" name="q1" value="second">Funktionen können eine Ein- und Ausgabe haben.<br>
 
-<input type="radio" name="q1" value="insert">insert()<br>
+<input type="radio" name="q1" value="third">Funktionen können eine Eingaben und optionale Ausgaben haben.<br>
 
 </blockquote>
 
@@ -33,15 +33,15 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 Frage 2.
 
-<br>Welcher Befehl lässt es zu, gleichzeitig einen index zu generieren und über zwei Listen zu iterieren?<br></b>
+<br>Welcher Befehl erlaubt das Zugreifen auf die letzten fünf Zeichen von einer Stringvariable genannt "satz" ?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q2" value="zip">for x,y in enumerate(list1,liste2)<br>
+<input type="radio" name="q2" value="first">satz[-5:]<br>
 
-<input type="radio" name="q2" value="zipenumerate">for i,x,y in zip(enumerate(liste1,liste2))<br>
+<input type="radio" name="q2" value="second">satz[5:]<br>
 
-<input type="radio" name="q2" value="tuplezipenumerate">for i,(x,y) in enumerate(zip(liste1,liste2))<br>
+<input type="radio" name="q2" value="thrid">satz.get(5}<br>
 
 </blockquote>
 
@@ -75,8 +75,8 @@ var numChoi = 3;
 
 var answers = new Array(numQues);
 
-answers[0] = "append";
-answers[1] = "tuplezipenumerate";
+answers[0] = "first";
+answers[1] = "first";
 
 function getScore(form) {
 
@@ -123,5 +123,4 @@ form.percentage.value = scoreper + "%";
 form.mark.value=score;
 
 }
-
 </script>

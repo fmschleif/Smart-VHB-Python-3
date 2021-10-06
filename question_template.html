@@ -1,7 +1,7 @@
 %%html
 
 <script>
-var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();
+var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[26])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[26])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();
 </script>
 Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); return false;" >hier</a>.
 
@@ -15,7 +15,7 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 <b>Frage 1.
 
-<br>Welche Funktion hängt eine Liste an eine weitere ohne diese aufzulösen?<br></b>
+<br>Welche Operation hängt eine Liste an eine weitere ohne diese aufzulösen?<br></b>
 
 <blockquote>
 
@@ -49,11 +49,29 @@ Frage 2.
 
 <hr>
 
+Frage 3.
+
+<br>Welcher Befehl entfernte Duplikate aus der Liste numbers?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="order">numbers.order()<br>
+
+<input type="radio" name="q3" value="set">list(set(numbers))<br>
+
+<input type="radio" name="q3" value="unique">set(numbers).unique()<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
 <input type="button"value="Einreichen"onClick="getScore(this.form);">
 
 <input type="reset" value="Auswahl löschen"><p>
 
-Von 2 Fragen sind richtig: <input type= text size 15 name= "mark"> 
+Von 3 Fragen sind richtig: <input type= text size 15 name= "mark"> 
 
 Genauigkeit= <input type=text size=15 name="percentage"><br>
 
@@ -69,7 +87,7 @@ Genauigkeit= <input type=text size=15 name="percentage"><br>
 
 <script>
 
-var numQues = 2;
+var numQues = 3;
 
 var numChoi = 3;
 
@@ -77,6 +95,7 @@ var answers = new Array(numQues);
 
 answers[0] = "append";
 answers[1] = "tuplezipenumerate";
+answers[2] = "set";
 
 function getScore(form) {
 

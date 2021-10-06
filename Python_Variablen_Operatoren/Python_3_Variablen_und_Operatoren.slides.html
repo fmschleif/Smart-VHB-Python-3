@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Python_3_Erweiterte_Variablentypen slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Python_3_Variablen_und_Operatoren slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14385,7 +14385,7 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-3-Erweiterte-Variablentypen">Python 3 Erweiterte Variablentypen<a class="anchor-link" href="#Python-3-Erweiterte-Variablentypen">&#182;</a></h1>
+<h1 id="Python-3-Variablen-und-Operatoren">Python 3 Variablen und Operatoren<a class="anchor-link" href="#Python-3-Variablen-und-Operatoren">&#182;</a></h1>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14397,9 +14397,11 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Lernziele">Lernziele<a class="anchor-link" href="#Lernziele">&#182;</a></h2><ul>
-<li>Erweiterte Variablentypen können benannt werden.</li>
-<li>Methoden für erweiterte Variablentypen können eingesetzt werden.</li>
-<li>Komplexere Datenstrukturen können erstellt und verändert werden.</li>
+<li>Die verschiedenen Variablentypen und Operatoren können benannt werden.</li>
+<li>Zuweisung von Werten können durchgeführt werden.</li>
+<li>Einfache Berechnungen können umgesetzt werden.</li>
+<li>Im Kurs besprochene Manipulationen der Variablen ist anwendbar. </li>
+<li>Funktionen können definiert und implementiert werden</li>
 </ul>
 
 </div>
@@ -14408,8 +14410,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Vorkenntnisse">Vorkenntnisse<a class="anchor-link" href="#Vorkenntnisse">&#182;</a></h2><ul>
 <li>Grundlagen in Mathematik </li>
-<li>Grundlagen in Python 3 Variablen und Operatoren</li>
-<li>Grundlagen in Python 3 Methoden und Kontrollstrukturen</li>
+<li>Keine weiteren Python Kenntnisse</li>
 </ul>
 
 </div>
@@ -14417,10 +14418,10 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Zielgruppe">Zielgruppe<a class="anchor-link" href="#Zielgruppe">&#182;</a></h2><ul>
-<li>Studierende in naturwissenschaftlichen Studiengängen.</li>
+<li>Studierende in Naturwissenschaftlichen</li>
 <li>Studierende in Ingenieurstudiengängen </li>
 <li>Studierende mit anderweitigem naturwissenschaftlichen/technischen Hintergrund</li>
-<li>Studierende mit ersten Erfahrung in Python oder in anderen Programmiersprachen</li>
+<li>Studierende mit ersten Erfahrungen in anderen Programmiersprachen</li>
 </ul>
 
 </div>
@@ -14428,131 +14429,53 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Aufbau">Aufbau<a class="anchor-link" href="#Aufbau">&#182;</a></h2><ul>
-<li>Einführung Listen</li>
-<li>Umgang mit Listen</li>
-<li>Stack</li>
-<li>Queue</li>
-<li>Tupel und Sequenzen</li>
-<li>Sets</li>
-<li>Dictionaries</li>
+<li>Variablen</li>
+<li>Operatoren </li>
+<li>Import Statements</li>
+<li>Irrationale Zahlen als Variablen</li>
+<li>Funktionen</li>
+<li>Strings </li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Einf&#252;hrung-Liste">Einf&#252;hrung Liste<a class="anchor-link" href="#Einf&#252;hrung-Liste">&#182;</a></h2><p>Eine Liste ist eine Datenstruktur in Python, in die jede Art von Datentyp in einer praktisch beliebigen Länge und anordnung aneinander gereiht werden können. Die Liste stellt somit die flexibelste Datenstruktur in der Python-Sprache dar. Die Liste wird mit [...] oder mit list(...) initialisiert.</p>
-<p>Beispiel: <code>a = [1, "test", false]</code> oder <code>a = list([1,"test",false])</code></p>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python liste mit zwei Elementen</span>
-<span class="nb">list</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;a&#39;, 5]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Flexibilt&#228;t-der-Liste">Flexibilt&#228;t der Liste<a class="anchor-link" href="#Flexibilt&#228;t-der-Liste">&#182;</a></h2><p>Beispielsweise kann ein</p>
-<ul>
-<li>"test" # String</li>
-<li>5 # Integer</li>
-<li>1.0 # Float</li>
-<li>True # Boolean</li>
+<h2 id="Variablen">Variablen<a class="anchor-link" href="#Variablen">&#182;</a></h2><ul>
+<li>Variablen speichern Informationen welche durch fest zugewiesene Namen wieder aufrufbar sind. </li>
+<li>Diese Information kann beispielsweise sein:<ul>
+<li>Zahlen</li>
+<li>Wörter, Buchstaben, Sätze</li>
+<li>Datum</li>
+<li>Wahr/Falsch-Ausdrücke</li>
+<li>Referenz auf eine andere Variable (Nicht behandelt)</li>
 </ul>
-<p>zusammen eine Liste sein.</p>
+</li>
+<li>Der Inhalt einer Variable entscheidet den (Daten)-Typ einer Variable. </li>
+<li>Jede Variable besitzt einen eindeutigen Namen.</li>
+<li>Es ist nicht möglich zwei Variablen mit gleichen Namen zu initialisieren.</li>
+</ul>
 
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel von vorheriger Slide</span>
-<span class="c1"># &quot;test&quot;,5,1.0,True</span>
-<span class="n">test</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="kc">True</span><span class="p">]</span>
-<span class="n">test</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;test&#39;, 5, 1.0, True]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Slicing">Slicing<a class="anchor-link" href="#Slicing">&#182;</a></h2><p>Das Slicing bezeichnet das Zugreifen auf ein oder mehrere Elemente der List. Jede Liste speichert einen Index mit dem auf die Elemente der Liste zugegriffen werden kann. Der Index beginnt ab 0 bis der Länge der Liste -1.</p>
+<h2 id="Grunds&#228;tzliches">Grunds&#228;tzliches<a class="anchor-link" href="#Grunds&#228;tzliches">&#182;</a></h2><p>In der Sprache Python ist jede Zeile eine für sich eigenständige Codezeile. Das heißt jede geschriebene Linie wird als Code interpretiert und ausgeführt. 
+Um mehrere Variablen zu initialisieren wird dementsprechend für jede Variable eine Zeile verwendet.</p>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Erstes Element</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Letztes Element</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Erstes bis 2-1tes ELement</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Drittletztes bis vorletztes Element</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span> <span class="c1"># Alle Elemente bis zum Ende, beginnend ab Element 2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Jede Zeile enthält Code. Python wird zeilenweise Programmiert.</span>
+<span class="c1"># Das heißt jede Zeile ist ausführbar mit Ausnahme von Zeilen mit #.</span>
+<span class="c1"># Diese sind Kommentare und bieten weitere Informationen zum Programm.  </span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Eine Code Zeile. Die Variable x mit Wert 5 wird initialisiert.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># print() ist eine sogenannte Ausgabefunktion.</span>
+<span class="n">x</span> <span class="c1"># Am Ende einer Zelle</span>
 </pre></div>
 
      </div>
@@ -14572,11 +14495,88 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>test
-True
-[&#39;test&#39;, 5]
-[5, 1.0]
-[1.0, True]
+<pre>5
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Datentypen">Datentypen<a class="anchor-link" href="#Datentypen">&#182;</a></h2><p>Jede Variable besitzt nach der Zuweisung einer Information einen Datentyp. Dieser Datentyp wird vom Compiler festgelegt. Der Typ bestimmt wie die Variable verwendet werden kann.</p>
+
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiele von Variablen und deren Datentyp</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Integer</span>
+<span class="n">buchstabe</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span> <span class="c1"># String</span>
+<span class="n">wort</span> <span class="o">=</span> <span class="s2">&quot;Apfel&quot;</span> <span class="c1"># String</span>
+<span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Das Wetter ist heute schön!&quot;</span> <span class="c1"># String</span>
+<span class="n">wahr</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Boolean Wahr</span>
+<span class="n">falsch</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># Boolean Falsch</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Nachweis von Datentypen der Variablen</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="mf">3.4</span> <span class="c1"># Wir initialisieren zwei Variablen.</span>
+<span class="n">type_x</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># type() Funktion liefert den Datentyp</span>
+<span class="n">type_y</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">type_x</span><span class="p">,</span><span class="n">type_y</span><span class="p">)</span> <span class="c1"># Funktionen können</span>
+<span class="c1"># geschachtelt werden. </span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;int&#39;&gt; &lt;class &#39;float&#39;&gt;
 </pre>
 </div>
 </div>
@@ -14588,21 +14588,7 @@ True
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Umgang-Listen">Umgang Listen<a class="anchor-link" href="#Umgang-Listen">&#182;</a></h2><p>Eine Liste in Python hat einige Methoden, die direkt auf die Liste angewandt werden können:</p>
-<ul>
-<li>list.append(x)</li>
-<li>list.extend(iterable)</li>
-<li>list.insert(i, x)</li>
-<li>list.remove(x)</li>
-<li>list.pop([i])</li>
-<li>list.clear()</li>
-<li>list.index(x[, start[,end]])</li>
-<li>list.count(x)</li>
-<li>list.sort(*, key=None, reverse=False)</li>
-<li>list.reverse()</li>
-<li>list.copy()</li>
-</ul>
-<p>Nachfolgend wird sehr einfach eine Liste mit der range() Funktion erstellt und mit den genannten Funktionen manipuliert.</p>
+<h2 id="Shortcuts">Shortcuts<a class="anchor-link" href="#Shortcuts">&#182;</a></h2><p>Anders als in anderen Programmiersprachen können in Python mehrere Variablen gleichzeitig initialisiert werden.</p>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14611,13 +14597,11 @@ True
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># Die Methode range() gibt einen Iterator für die </span>
-                           <span class="c1"># Zahlen [1,...10] zurück, die Methode list() fasst</span>
-                           <span class="c1"># diese Elemente in eine Python Liste zusammen.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liste: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span> <span class="c1"># Füge die Zahlen 11 und 12 als Liste am Ende hinzu.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Append: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Shortcuts </span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span> <span class="c1"># Unterschiedliche Werte für zwei Variablen</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Alle haben den Wert 2 </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14637,9 +14621,8 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Liste:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-Append:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12]]
+<pre>3 4
+2 2
 </pre>
 </div>
 </div>
@@ -14654,14 +14637,11 @@ Append:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12]]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">])</span> <span class="c1"># Erweitert die Liste numbers mit den Zahlen</span>
-                        <span class="c1"># [13,14] am Ende, durch das erweitern</span>
-                        <span class="c1"># der Liste mit Iterator([13,14]).</span>
-                        <span class="c1"># numb[len(numbers):] = range(13,14)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Extend: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="c1"># Für am Index 10 die Zahl 99 ein. Notiz: der Index beginnt bei 0</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Insert: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Darstellung von Floats</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1.3</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="mf">1.6e10</span> <span class="c1"># 1.6^10</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">1.0e-10</span> <span class="c1"># 0.1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14681,10 +14661,7 @@ Append:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12]]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Extend:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12], 13, 14]
-
-Insert:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 99, [11, 12], 13, 14]
+<pre>1.3 16000000000.0 1e-10
 </pre>
 </div>
 </div>
@@ -14693,22 +14670,28 @@ Insert:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 99, [11, 12], 13, 14]
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Operatoren-f&#252;r-Zahlen">Operatoren f&#252;r Zahlen<a class="anchor-link" href="#Operatoren-f&#252;r-Zahlen">&#182;</a></h2><ul>
+<li>Durch Operatoren können die Informationen der Variablen bearbeitet werden.</li>
+<li>Fast alle mathematischen Operatoren sind standartmäßig in Python vorhanden.</li>
+</ul>
+
+</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1"># Löscht die erste 99 in der Liste. </span>
-                   <span class="c1"># Wenn die Zahl nicht vorhanden ist, dann gibt es einen ValueError.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Remove: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># Entfernt das Element an der letzten Stelle, </span>
-                   <span class="c1"># wenn kein Index angegeben ist und gibt das entfernte Element zurück.</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Entfernt das Element an einer bestimmten Stelle und</span>
-                   <span class="c1"># gibt das entfernte Element zurück.</span>
-                   <span class="c1"># Alternativ mit del numbers[0], jedoch ohne return Wert.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pop &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;, &quot;</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s2">&quot;: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span>
+ <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="c1"># Plus operation</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> 
+ <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># Minus </span>
+ <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># Modulo Operator</span>
+ <span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span> <span class="c1"># a hoch b </span>
+ <span class="nb">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># a geteilt durch b</span>
 </pre></div>
 
      </div>
@@ -14728,10 +14711,11 @@ Insert:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 99, [11, 12], 13, 14]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Remove:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12], 13, 14]
-
-Pop  14 ,  0 :  [1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12], 13]
+<pre>11
+-5
+3
+6561
+0.375
 </pre>
 </div>
 </div>
@@ -14740,19 +14724,21 @@ Pop  14 ,  0 :  [1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12], 13]
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Imports">Imports<a class="anchor-link" href="#Imports">&#182;</a></h2><p>Ein standard Python-Programm bietet nur eine sehr begrenzte Auswahl an Funktionen und Operatoren an. Beispielsweise die print() Funktion. Durch das importieren von zusätzlichen Modulen lässt sich der Funktionsumfang erweitern und zusätzliche Variablen einführen. Ein Modul bezeichnet eine selbständige Python-Datei (.py), die Variablen, Operatoren und Funktionen definiert.</p>
+
+</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Gibt den Index der ersten 3 zurück. </span>
-                         <span class="c1"># Optional kann mit Start, Ende nach der Zahl,</span>
-                         <span class="c1"># die Suche auf ein Teil der Liste begrenzt werden.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Index der ersten 10: &quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
-
-<span class="n">count</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Zählt die Anzahl eines Elementes in einer Liste</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Count of 5: &quot;</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="c1"># Gibt die Zahl Pi aus die wir durch </span>
+<span class="c1"># den Import vom Modul Math unserem Programm verfügbar machen.</span>
 </pre></div>
 
      </div>
@@ -14772,10 +14758,7 @@ Pop  14 ,  0 :  [1, 2, 3, 4, 5, 6, 7, 8, 9, [11, 12], 13]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Index der ersten 10:  2
-
-Count of 5:  1
+<pre>3.141592653589793
 </pre>
 </div>
 </div>
@@ -14784,19 +14767,33 @@ Count of 5:  1
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Irrationalle-Zahlen">Irrationalle Zahlen<a class="anchor-link" href="#Irrationalle-Zahlen">&#182;</a></h2><ul>
+<li>Irrationalle Zahlen stehen nicht regulär zur Verfügung.</li>
+<li>Um diese nutzen zu können müssen wir Sie in das Programm importieren.</li>
+<li>Das Modul "math" bietet eine Vielzahl von mathematischen Funktionen und Ausdrücken</li>
+<li>Durch das "import" Statement können zusätzliche Funktionen und Variablen in den Progamm-Code importiert werden  </li>
+</ul>
+
+</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Sortiert die Liste, optional kann mit reverse=True/False</span>
-                           <span class="c1"># die Reihenfolge bestimmt werden.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sort: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> 
+<span class="c1"># Importieren von mathematischen Funktionen in das Program</span>
+<span class="c1"># Ab jetzt können Sie &quot;math&quot; benutzen </span>
 
-<span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># Kehrt die Liste um.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reverse: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="c1"># Variable mit irrationaler Zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span> <span class="c1"># Ausgabe </span>
+<span class="n">neg</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span> <span class="c1"># Negativer Integer</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span> <span class="c1"># Absoluter Wert der Variable </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span> <span class="c1"># Sinusfunktion an der Stelle 0.5</span>
 </pre></div>
 
      </div>
@@ -14816,10 +14813,9 @@ Count of 5:  1
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Sort:  [13, 8, 4, 2, 1]
-
-Reverse:  [1, 2, 4, 8, 13]
+<pre>3.141592653589793
+5
+0.479425538604203
 </pre>
 </div>
 </div>
@@ -14834,11 +14830,12 @@ Reverse:  [1, 2, 4, 8, 13]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers_kopie</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># Gibt eine Kopie der Liste zurück,</span>
-                               <span class="c1"># äquivalent zu numbers_kopie = numbers[:]</span>
-<span class="n">numbers</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Entfernt alle Elemente in einer Liste, äquivalent: del numbers[:]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Clear: &quot;</span><span class="p">,</span><span class="n">numbers</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kopie von numbers: &quot;</span><span class="p">,</span><span class="n">numbers_kopie</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Komplexe Zahlen </span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span> <span class="c1"># Reeller Anteil gleich 3 und imaginärer is 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="c1"># Ausgabe von z </span>
+
+<span class="n">z2</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Alternative Art der Variablenerstellung</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="n">z2</span><span class="p">)</span> <span class="c1"># Vergleich über Äquivalenz operator</span>
 </pre></div>
 
      </div>
@@ -14858,10 +14855,8 @@ Reverse:  [1, 2, 4, 8, 13]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Clear:  []
-
-Kopie von numbers:  [1, 2, 4, 8, 13]
+<pre>(3+4j)
+True
 </pre>
 </div>
 </div>
@@ -14870,25 +14865,24 @@ Kopie von numbers:  [1, 2, 4, 8, 13]
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Iterationen-&#252;ber-Listen">Iterationen &#252;ber Listen<a class="anchor-link" href="#Iterationen-&#252;ber-Listen">&#182;</a></h2><p>Schleifen über die Datenstruktur Liste. Anders als in anderen Programmiersprachen, muss nicht zwingend mit einem eigens programmierten Index über eine Liste iteriert werden. Es reicht lediglich ein Keyword für das iterieren zu benennen. Beispielsweise wie in der nächsten Slide.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span> <span class="c1"># zahl ist eine beliebig benennbare Variable.</span>
-    <span class="n">summe</span> <span class="o">+=</span> <span class="n">zahl</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Summe: &quot;</span><span class="p">,</span><span class="n">summe</span><span class="p">)</span>
-<span class="c1"># Kurzform mit der sum() Funktion:</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kurzform-Summe: &quot;</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># Funktionen für nicht reelle Zahlen</span>
+<span class="kn">import</span> <span class="nn">cmath</span> <span class="c1"># Funktionen für komplexe Zahlen</span>
+
+<span class="c1"># Funktionen für komplexe Zahlen</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="c1"># Abs-Funktion ist übergreifend</span>
+<span class="k">def</span> <span class="nf">complex_abs</span><span class="p">(</span><span class="n">z</span><span class="p">):</span> <span class="c1"># Test zur übereinstimmung</span>
+    <span class="c1"># Eigene Implementierung von einer Funktion</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#  Schachtelung von sqrt()-Funktion und ** Operator</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">==</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14908,10 +14902,9 @@ Kopie von numbers:  [1, 2, 4, 8, 13]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Summe:  15
-
-Kurzform-Summe:  15
+<pre>5.0
+5.0
+True
 </pre>
 </div>
 </div>
@@ -14923,7 +14916,21 @@ Kurzform-Summe:  15
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Liste-erzeugen-mit-For-Schleife">Liste erzeugen mit For-Schleife<a class="anchor-link" href="#Liste-erzeugen-mit-For-Schleife">&#182;</a></h2>
+<h2 id="Funtionen">Funtionen<a class="anchor-link" href="#Funtionen">&#182;</a></h2><ul>
+<li>Bisherige Funktionen: print(),abs(),type() und die gerade erstelle comlex_abs()</li>
+<li>Funktionen enthalten Programmlogik.</li>
+<li>Beispiel sind Berechnungen oder Prozesse.</li>
+<li>Funktionen können ein oder mehrere Eingaben haben.<ul>
+<li>Dabei können diese optional oder erforderlich sein.</li>
+</ul>
+</li>
+<li>Funktionen können eine oder mehrere Ausgaben haben.<ul>
+<li>Diese sind allerdings bei Implementierung festzulegen.</li>
+</ul>
+</li>
+<li>print() ist eine Beispiel für eine Funktion mit mehreren Eingaben. </li>
+</ul>
+
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14931,13 +14938,14 @@ Kurzform-Summe:  15
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">## Leere Liste</span>
-<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span> <span class="c1"># Iterator von 0 bis 6-1.</span>
-    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span> <span class="c1"># Bei einzelnen Zahlen</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>           <span class="c1"># ist append und extend gleich.</span>
-<span class="c1"># Kurzform</span>
-<span class="n">numbers2</span> <span class="o">=</span> <span class="p">[</span><span class="n">zahl</span> <span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span> <span class="c1"># List Comprehension</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel einer Funktion f(x) = x * x </span>
+
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1"># Definieren einer Funktion mit Eingabe-Argument</span>
+    <span class="c1"># Name beliebig</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="c1"># Funktionslogik</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="c1"># Ausgabe der Funktion</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> 
+<span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14953,38 +14961,36 @@ Kurzform-Summe:  15
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[0, 1, 2, 3, 4, 5]
-[0, 1, 2, 3, 4, 5]
-</pre>
-</div>
-</div>
 
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>4</pre>
 </div>
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Enumerate">Enumerate<a class="anchor-link" href="#Enumerate">&#182;</a></h2><p>Anders als in anderen Programmiersprachen, gibt es in Python die Möglichkeit, durch enumerate() einen Index-Zähler zu erhalten der nicht selbst programmiert werden muss.</p>
+</div>
 
 </div>
+
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Index: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, Zahl: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zahl</span><span class="p">))</span>
-    <span class="n">summe</span> <span class="o">+=</span> <span class="n">zahl</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summe: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">summe</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel mit zwei Eingaben: f(x,n) = x^n </span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span> <span class="c1"># Standartwert für n ist 2</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># Verwenden einer bereits importierten Funktion</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Keine Funktionsausgabe sondern </span>
+                  <span class="c1"># endet mit einer Print-Funktion.</span>
+<span class="n">x</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">4</span>
+<span class="n">convert</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># Üblich auch in anderen Programmiersprachen</span>
+<span class="n">convert</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Optionale Parameter durch Standartwert</span>
 </pre></div>
 
      </div>
@@ -15004,12 +15010,8 @@ Kurzform-Summe:  15
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Index: 0, Zahl: 10
-Index: 1, Zahl: 11
-Index: 2, Zahl: 12
-Index: 3, Zahl: 13
-Index: 4, Zahl: 14
-Summe: 60
+<pre>16.0
+4.0
 </pre>
 </div>
 </div>
@@ -15021,7 +15023,12 @@ Summe: 60
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Zip">Zip<a class="anchor-link" href="#Zip">&#182;</a></h2><p>Durch die zip() Funktion lassen sich mehrere Listen verbinden und z.B. gleichzeitig iterieren.</p>
+<h2 id="String-und-Characters">String und Characters<a class="anchor-link" href="#String-und-Characters">&#182;</a></h2><ul>
+<li>Einzelne Buchstaben, Wörter oder Sätze sind Strings.</li>
+<li>Anders als in anderen Programmiersprachen gibt es den Datentypen Character nicht.</li>
+<li>ABER: Jeder String ist eine abfolge von aneinandergereihten Buchstaben. </li>
+<li>Auf diese Buchstaben kann zugegriffen werden.</li>
+</ul>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15030,11 +15037,14 @@ Summe: 60
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">speisekarte</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;salat&#39;</span><span class="p">,</span> <span class="s1">&#39;nudeln&#39;</span><span class="p">]</span>
-<span class="n">preise</span> <span class="o">=</span> <span class="p">[</span><span class="mf">22.99</span><span class="p">,</span> <span class="mf">9.99</span><span class="p">,</span> <span class="mf">13.99</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beide Variablen sind Strings</span>
+<span class="n">buchstabe</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+<span class="n">wort</span> <span class="o">=</span> <span class="s2">&quot;apfel&quot;</span>
 
-<span class="k">for</span> <span class="n">speise</span><span class="p">,</span> <span class="n">preis</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">,</span><span class="n">preise</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">speise</span><span class="p">,</span><span class="s2">&quot;kostet&quot;</span><span class="p">,</span> <span class="n">preis</span><span class="p">)</span>
+<span class="n">type_wort</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">wort</span><span class="p">)</span> <span class="c1"># type() Funktion liefert den Datentyp</span>
+<span class="n">type_buchstabe</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">buchstabe</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">type_wort</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">type_buchstabe</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15054,9 +15064,8 @@ Summe: 60
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>steak kostet 22.99
-salat kostet 9.99
-nudeln kostet 13.99
+<pre>&lt;class &#39;str&#39;&gt;
+&lt;class &#39;str&#39;&gt;
 </pre>
 </div>
 </div>
@@ -15068,7 +15077,19 @@ nudeln kostet 13.99
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Stack">Stack<a class="anchor-link" href="#Stack">&#182;</a></h2><p>Listen in Python können auch einfach als Stack nach dem LIFO Prinzip (“last-in, first-out”) genutzt werden. Die hierfür nötigen Funktionen sind append() und pop()</p>
+<h2 id="String-Operatoren">String Operatoren<a class="anchor-link" href="#String-Operatoren">&#182;</a></h2><ul>
+<li>String können durch Operatoren Manipuliert werden, beispielsweise<ul>
+<li>können weiter Zeichen hinzugefügt oder wiederholt werden,</li>
+<li>Zeichen in einem String gesucht werden,</li>
+<li>Sonderzeichen und Zahlen hinzugefügt werden</li>
+</ul>
+</li>
+<li>Sonderzeichen müssen encoded werden, um innerhalb eines String eingesetzt zu werden.<ul>
+<li>Dies ist notwendig da Sonderzeichen, wie beispielsweise % Programmlogik kapseln</li>
+<li>Um diese Logik nicht auszuführen sonder das Zeichen als solches zu verwenden, muss es daher encoded werden. </li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15077,11 +15098,11 @@ nudeln kostet 13.99
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span>
-<span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">satz1</span> <span class="o">=</span> <span class="s2">&quot;Äpfel oder </span><span class="se">\&#39;</span><span class="s2">Apples</span><span class="se">\&#39;</span><span class="s2">&quot;</span>
+<span class="n">satz2</span> <span class="o">=</span> <span class="s2">&quot;und Birnen oder </span><span class="se">\&#39;</span><span class="s2">pear</span><span class="se">\&#39;</span><span class="s2">.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz1</span><span class="p">)</span> <span class="c1"># Einfache Ausgabe</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">satz1</span> <span class="o">+</span> <span class="n">satz2</span> <span class="p">)</span> <span class="c1"># Satz 2 an Satz 1 ausgehängt</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz1</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Satz1 zwei mal </span>
 </pre></div>
 
      </div>
@@ -15101,8 +15122,9 @@ nudeln kostet 13.99
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1, 2, 3, 4, 5, 6]
-[1, 2, 3, 4, 5]
+<pre>Äpfel oder &#39;Apples&#39;
+Äpfel oder &#39;Apples&#39;und Birnen oder &#39;pear&#39;.
+Äpfel oder &#39;Apples&#39;Äpfel oder &#39;Apples&#39;
 </pre>
 </div>
 </div>
@@ -15111,25 +15133,17 @@ nudeln kostet 13.99
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Queue">Queue<a class="anchor-link" href="#Queue">&#182;</a></h2><p>Queues (dt. Schlange) nach dem FIFO Prinzip (“first-in, first-out”) können theoretisch mit Python Listen umgesetzt werden, sind jedoch nicht optimal, weil alle nachfolgenden Elemente beim Einfügen/Entfernen um eine Position verschoben werden müssen. Die Methode deque von Python Collections bietet hier abhilfe.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span> <span class="c1">## import der deque-Methode</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
-
-<span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># gleich wie bei der Liste</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Append 0: &quot;</span><span class="p">,</span><span class="n">queue</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Buchstabe und Wörter in Strings suchen </span>
+<span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Äpfel und Birnen&quot;</span>
+<span class="n">suchwort</span> <span class="o">=</span> <span class="s2">&quot;Birne&quot;</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">suchwort</span> <span class="ow">in</span> <span class="n">satz</span><span class="p">)</span> <span class="c1"># &quot;in&quot; Operator für das suchen von String in String</span>
+<span class="c1"># Ausgabe ist Boolean True, d. h. das suchwort ist im Satz </span>
 </pre></div>
 
      </div>
@@ -15149,9 +15163,7 @@ nudeln kostet 13.99
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>deque([1, 2, 3, 4, 5])
-
-Append 0:  deque([1, 2, 3, 4, 5, 0])
+<pre>True
 </pre>
 </div>
 </div>
@@ -15166,13 +15178,15 @@ Append 0:  deque([1, 2, 3, 4, 5, 0])
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span> <span class="c1"># neue Methode von deque, die effizient das erste Element</span>
-                    <span class="c1"># in der Liste entfernt</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Popleft&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">queue</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zugriff auf einzelne Elemente im String</span>
 
-<span class="n">b</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1"># Gleich wie bei der Liste, </span>
-                <span class="c1"># entfernt das letzte Element und gibt es zurück</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pop(last)&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">queue</span><span class="p">)</span>
+<span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Äpfel und Birnen&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># [] Slice Operator,</span>
+<span class="c1"># d. h. Zugriff auf ein einzelnes Element </span>
+<span class="c1"># oder mehrere, mit 0 als erstes Element</span>
+<span class="c1"># Die Position eines Element ist sein Index</span>
+<span class="c1"># &quot;:&quot; ist von index 0 bis index 5</span>
 </pre></div>
 
      </div>
@@ -15192,10 +15206,7 @@ Append 0:  deque([1, 2, 3, 4, 5, 0])
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Popleft 1 : deque([2, 3, 4, 5, 0])
-
-Pop(last) 0 : deque([2, 3, 4, 5])
+<pre>Äpfel
 </pre>
 </div>
 </div>
@@ -15204,24 +15215,18 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Tupel-und-Sequenzen">Tupel und Sequenzen<a class="anchor-link" href="#Tupel-und-Sequenzen">&#182;</a></h2><p>Tupel sind komma-getrennte Datenstrukturen ohne einheitliches Format. Standard operationen wie index und slice operationen sind hier auch möglich. Tupel können auch andere Tupel enthalten, jedoch können Elemente in einem Tupel nicht verändert werden.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;welt&quot;</span><span class="p">,</span> <span class="mf">0.41</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span> <span class="c1"># Verpacken von mehreren Elementen zu einem Tupel</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">t</span> <span class="c1"># Entpacken der Elemente in Variablen möglich</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wichtige Slice Index Befehle</span>
+<span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Äpfel und Birnen&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># Index 0: Erstes Element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Index -1: Letzes Elemtn</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># Index 0 bis Index 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1"># Drittletzer Index bis Ende</span>
 </pre></div>
 
      </div>
@@ -15241,48 +15246,10 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>hallo welt
-(1, &#39;hallo&#39;, &#39;welt&#39;, 0.41, &#39;a&#39;)
-(&#39;hallo&#39;, &#39;welt&#39;)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-<span class="n">t2</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># veränderbare Elemente in einem Tupel können verändert werden!</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-<span class="c1"># t2[0] = 1 ist Beispielsweise nicht möglich!</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>((1, &#39;hallo&#39;, &#39;welt&#39;, 0.41, &#39;a&#39;), 1, 2, 3, 4, 5, [6, 7])
-((1, &#39;hallo&#39;, &#39;welt&#39;, 0.41, &#39;a&#39;), 1, 2, 3, 4, 5, [10, 7])
+<pre>Ä
+n
+Äpf
+nen
 </pre>
 </div>
 </div>
@@ -15294,7 +15261,62 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Spezielle-Initialisierung-von-Tupeln">Spezielle Initialisierung von Tupeln<a class="anchor-link" href="#Spezielle-Initialisierung-von-Tupeln">&#182;</a></h2>
+<h2 id="String-Funktionen">String Funktionen<a class="anchor-link" href="#String-Funktionen">&#182;</a></h2><ul>
+<li>Neben Operatoren haben Strings auch Funktionen.</li>
+<li>Diese beinhalten komplexere Logik wie, z. B.:</li>
+<li>Ersetzen, Zeichen Zählen, Alles kleine oder große Symbole.</li>
+</ul>
+
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Äpfel und Birnen&quot;</span>
+<span class="n">satz</span> <span class="o">=</span> <span class="n">satz</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Birnen&quot;</span><span class="p">,</span><span class="s2">&quot;Bananen&quot;</span><span class="p">)</span> 
+<span class="c1">#Suche den String Birnen und erstze mit Bananan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">satz</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1"># Alles klein </span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Äpfel und Bananen
+äpfel und bananen
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans">&#182;</a></h2><ul>
+<li>Binärer Datentyp mit True oder Falsch</li>
+<li>Meist genutzt in Kontrollstrukturen</li>
+</ul>
+
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15302,11 +15324,10 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">empty_tupel</span> <span class="o">=</span> <span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">empty_tupel</span><span class="p">))</span>
-<span class="n">singleton</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>  <span class="c1"># Wichtig: Durch das Komma am Ende wird aus dem String ein Tupel</span>
-                      <span class="c1"># und ist somit nicht veränderbar</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">singleton</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15326,8 +15347,8 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0
-1
+<pre>True False
+&lt;class &#39;bool&#39;&gt; &lt;class &#39;bool&#39;&gt;
 </pre>
 </div>
 </div>
@@ -15336,25 +15357,21 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Sets">Sets<a class="anchor-link" href="#Sets">&#182;</a></h2><p>Ein Set ist eine unsortierte Liste ohne Duplikate. Dieser Variablentyp wird normalerweise zum Entfernen von Duplikaten oder zur Überprüfung, ob ein Element vorhanden ist, verwendet. Ein Set ist mit {} gekennzeichnet, kann jedoch nur mit set() leer initialisiert werden. Des Weiteren gibt es verschiedene Set Operationen, um Elemente in Sets zu vergleichen.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">leeres_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">leeres_set</span><span class="p">)</span>
-<span class="n">hellow_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;hallo welt&#39;</span><span class="p">)</span> <span class="c1"># Alternativ: {&#39;h&#39;,&#39;a&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;,&#39; &#39;,&#39;w&#39;,&#39;e&#39;,&#39;l&#39;,&#39;t&#39;}</span>
-<span class="n">hallo_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;hallo&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hellow_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x&quot;</span> <span class="ow">in</span> <span class="n">hellow_set</span><span class="p">)</span> <span class="c1"># Prüfung, ob Element vorhanden ist</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;h&quot;</span> <span class="ow">in</span> <span class="n">hellow_set</span><span class="p">)</span> <span class="c1"># Prüfung, ob Element vorhanden ist</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Operatoren auf Booleans folgen dem Prinzip der Aussagenlogik </span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span><span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># OR Operator: Wahr, wenn a oder b wahr.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># AND Operator: Wahr, wenn a und b wahr.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># EQ Operator: Wahr, wenn a und b gleich.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># NEQ Operator: Wahr, wenn a oder b ungleich.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># NOT Operator: Negiere Variable</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="ow">and</span> <span class="n">c</span> <span class="p">)</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># Verbschachtelung</span>
 </pre></div>
 
      </div>
@@ -15374,8 +15391,10 @@ Pop(last) 0 : deque([2, 3, 4, 5])
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>set()
-{&#39;w&#39;, &#39;h&#39;, &#39;l&#39;, &#39;e&#39;, &#39;t&#39;, &#39; &#39;, &#39;a&#39;, &#39;o&#39;}
+<pre>True
+False
+False
+True
 False
 True
 </pre>
@@ -15386,235 +15405,13 @@ True
 
 </div>
 
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Initialisiere set über Liste</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">aset</span><span class="p">)</span> <span class="c1"># Alle duplikate wurden entfernt.</span>
-<span class="n">alist</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">aset</span><span class="p">)</span> <span class="c1"># Konvertiere zurück zur liste</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{1, 2, 3, 6, 8}
-[1, 2, 3, 6, 8]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Set-Operationen">Set Operationen<a class="anchor-link" href="#Set-Operationen">&#182;</a></h2><p>Mit einer Set Operation kann Boolesche Algebra auf zwei Listen angewendet werden. Dadurch können Beispielsweise duplikate oder fehlende Elemente herausgefiltert werden.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hellow_set</span> <span class="o">-</span> <span class="n">hallo_set</span><span class="p">)</span> <span class="c1"># Alle Elemente in hellow_set abzüglich der Elemente in hallo_set</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hellow_set</span> <span class="o">|</span> <span class="n">hallo_set</span><span class="p">)</span> <span class="c1"># Alle Elemente in hellow_set oder in hallo_set, oder in beiden</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hellow_set</span> <span class="o">&amp;</span> <span class="n">hallo_set</span><span class="p">)</span> <span class="c1"># Alle Elemente in hellow_set und in hallo_set</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hellow_set</span> <span class="o">^</span> <span class="n">hallo_set</span><span class="p">)</span> <span class="c1"># Alle Elemente in hellow_set oder in hallo_set, oder nicht in beiden</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;w&#39;, &#39;e&#39;, &#39;t&#39;, &#39; &#39;}
-{&#39;w&#39;, &#39;h&#39;, &#39;l&#39;, &#39;e&#39;, &#39;t&#39;, &#39; &#39;, &#39;a&#39;, &#39;o&#39;}
-{&#39;l&#39;, &#39;a&#39;, &#39;o&#39;, &#39;h&#39;}
-{&#39;w&#39;, &#39;e&#39;, &#39;t&#39;, &#39; &#39;}
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h2><p>Ein Wörterbuch (dictionaray) ähnelt einer Liste, hat aber Schlüssel als Indizes anstelle von impliziten Ganzzahlwerten. Diese Schlüssel müssen einzigartig sein, können aber sehr flexibel sein, z.B. auch Strings. Dictionaries werden mit {} initialisiert. Hauptsächlich wird dieser Variablentyp verwendet, um Werte schlüsselweise zu speichern. Mit del kann ein Schlüssel-Werte-Paar gelöscht oder einfach mit einem neuen Wert an einem vorhandenen Schlüssel überschrieben werden. Ein dictionary kann auch ähnlich wie eine Liste in Kurzform initialisiert werden. Ein einfacher Weg durch ein Dictionary zu iterieren ist die .items() Methode.</p>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">speisekarte</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nudeln&#39;</span><span class="p">:</span><span class="mf">11.99</span><span class="p">,</span> <span class="s1">&#39;Salat&#39;</span><span class="p">:</span><span class="mf">9.99</span><span class="p">}</span>
-<span class="n">speisekarte</span><span class="p">[</span><span class="s1">&#39;Steak&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">15.99</span> <span class="c1"># Setzen eines neuen Schlüssel-Werte-Paars</span>
-                             <span class="c1">#(oder überschreiben, falls bereits vorhanden)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">)</span> <span class="c1"># Standardausgabe des dictionaries</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">[</span><span class="s2">&quot;Salat&quot;</span><span class="p">])</span> <span class="c1"># Standardausgabe des Wertes bei einem speziellen Schlüssel</span>
-<span class="k">del</span> <span class="n">speisekarte</span><span class="p">[</span><span class="s2">&quot;Salat&quot;</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;Nudeln&#39;: 11.99, &#39;Salat&#39;: 9.99, &#39;Steak&#39;: 15.99}
-9.99
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">))</span> <span class="c1"># Liste aller Schlüssel</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">speisekarte</span><span class="p">))</span> <span class="c1"># sortierte Liste aller Schlüssel</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Salat&#39;</span> <span class="ow">in</span> <span class="n">speisekarte</span><span class="p">)</span> <span class="c1"># Existenzprüfung</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Steak&#39;</span> <span class="ow">in</span> <span class="n">speisekarte</span><span class="p">)</span> <span class="c1"># Existenzprüfung</span>
-<span class="nb">print</span><span class="p">({</span><span class="n">a</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="mi">10</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)})</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;Nudeln&#39;: 11.99, &#39;Steak&#39;: 15.99}
-[&#39;Nudeln&#39;, &#39;Steak&#39;]
-[&#39;Nudeln&#39;, &#39;Steak&#39;]
-False
-True
-{1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">speisekarte</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">speisekarte</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span> 
-            <span class="c1"># Kann auch mit Enumerate kombiniert werden für automatischen Zähler.</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Nudeln 11.99
-Steak 15.99
-0 Nudeln 11.99
-1 Steak 15.99
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="kd">var</span> <span class="nx">code_show</span><span class="o">=!</span><span class="mf">1</span><span class="p">;</span><span class="kd">function</span> <span class="nx">code_toggle</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">,</span><span class="nx">d</span><span class="p">;</span><span class="nx">code_show</span><span class="o">?</span><span class="p">(</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;</span><span class="p">)[</span><span class="mf">25</span><span class="p">])</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">),</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div.cell.code_cell.rendered.selected div.input&quot;</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">:</span><span class="p">(</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;</span><span class="p">)[</span><span class="mf">25</span><span class="p">])</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">),</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div.cell.code_cell.rendered.selected div.input&quot;</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">));</span><span class="nx">code_show</span><span class="o">=!</span><span class="nx">code_show</span><span class="p">}</span><span class="nx">code_toggle</span><span class="p">();&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>Zum Anzeigen des verwendeten Javascript klicken Sie <span class="p">&lt;</span><span class="nt">a</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;code_toggle(); return false;&quot;</span> <span class="p">&gt;</span>hier<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Single Choice Fragen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;quiz&quot;</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Frage 1.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Welche Funktion hängt eine Liste an eine weitere ohne diese aufzulösen?<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;extend&quot;</span><span class="p">&gt;</span>extend()<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;append&quot;</span><span class="p">&gt;</span>append()<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;insert&quot;</span><span class="p">&gt;</span>insert()<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>Frage 2.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Welcher Befehl lässt es zu, gleichzeitig einen index zu generieren und über zwei Listen zu iterieren?<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;zip&quot;</span><span class="p">&gt;</span>for x,y in enumerate(list1,liste2)<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;zipenumerate&quot;</span><span class="p">&gt;</span>for i,x,y in zip(enumerate(liste1,liste2))<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tuplezipenumerate&quot;</span><span class="p">&gt;</span>for i,(x,y) in enumerate(zip(liste1,liste2))<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">hr</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="na">value</span><span class="o">=</span><span class="s">&quot;Einreichen&quot;</span><span class="na">onClick</span><span class="o">=</span><span class="s">&quot;getScore(this.form);&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;reset&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Auswahl löschen&quot;</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Von 2 Fragen sind richtig: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">size</span> <span class="na">15</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mark&quot;</span><span class="p">&gt;</span> Genauigkeit=<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">size</span><span class="o">=</span><span class="s">15</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;percentage&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Form&quot;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="kd">var</span> <span class="nx">numQues</span><span class="o">=</span><span class="mf">2</span><span class="p">;</span><span class="kd">var</span> <span class="nx">numChoi</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="kd">var</span> <span class="nx">answers</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">numQues</span><span class="p">);</span><span class="nx">answers</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;append&quot;</span><span class="p">;</span><span class="nx">answers</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;tuplezipenumerate&quot;</span><span class="p">;</span><span class="kd">function</span> <span class="nx">getScore</span><span class="p">(</span><span class="nx">form</span><span class="p">){</span><span class="kd">var</span> <span class="nx">score</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">currElt</span><span class="p">;</span><span class="kd">var</span> <span class="nx">currSelection</span><span class="p">;</span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">numQues</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="nx">currElt</span><span class="o">=</span><span class="nx">i</span><span class="o">*</span><span class="nx">numChoi</span><span class="p">;</span><span class="nx">answered</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="k">for</span> <span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">numChoi</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span><span class="nx">currSelection</span><span class="o">=</span><span class="nx">form</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">currElt</span> <span class="o">+</span> <span class="nx">j</span><span class="p">];</span><span class="k">if</span> <span class="p">(</span><span class="nx">currSelection</span><span class="p">.</span><span class="nx">checked</span><span class="p">){</span><span class="nx">answered</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span><span class="k">if</span> <span class="p">(</span><span class="nx">currSelection</span><span class="p">.</span><span class="nx">value</span><span class="o">==</span><span class="nx">answers</span><span class="p">[</span><span class="nx">i</span><span class="p">]){</span><span class="nx">score</span><span class="o">++</span><span class="p">;</span><span class="k">break</span><span class="p">;}}}</span><span class="k">if</span> <span class="p">(</span><span class="nx">answered</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Bitte alle Fragen beantworten!&quot;</span><span class="p">)</span> <span class="p">;</span><span class="k">return</span> <span class="kc">false</span><span class="p">;}}</span><span class="kd">var</span> <span class="nx">scoreper</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">score</span><span class="o">/</span><span class="nx">numQues</span><span class="o">*</span><span class="mf">100</span><span class="p">);</span><span class="nx">form</span><span class="p">.</span><span class="nx">percentage</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">scoreper</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">;</span><span class="nx">form</span><span class="p">.</span><span class="nx">mark</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">score</span><span class="p">;}&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>&lt;script&gt;var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName(&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;)[20])&amp;&amp;(e.style.display=&quot;&quot;),null!=(d=document.querySelector(&quot;div.cell.code_cell.rendered.selected div.input&quot;))&amp;&amp;(d.style.display=&quot;&quot;)):(null!=(e=document.getElementsByClassName(&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;)[20])&amp;&amp;(e.style.display=&quot;none&quot;),null!=(d=document.querySelector(&quot;div.cell.code_cell.rendered.selected div.input&quot;))&amp;&amp;(d.style.display=&quot;none&quot;));code_show=!code_show}code_toggle();&lt;/script&gt;Zum Anzeigen des verwendeten Javascript klicken Sie &lt;a onClick=&quot;code_toggle(); return false;&quot; &gt;hier&lt;/a&gt;.&lt;center&gt;&lt;h1&gt;Single Choice Fragen&lt;/h1&gt;&lt;/center&gt;&lt;p&gt;&lt;form name=&quot;quiz&quot;&gt;&lt;p&gt;&lt;b&gt;Frage 1.&lt;br&gt;Welche der folgenden Aussagen stimmt über Funktionen?&lt;br&gt;&lt;/b&gt;&lt;blockquote&gt;&lt;input type=&quot;radio&quot; name=&quot;q1&quot; value=&quot;first&quot;&gt;Funktionen können mehrere Eingaben und Ausgaben haben.&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;q1&quot; value=&quot;second&quot;&gt;Funktionen können eine Ein- und Ausgabe haben.&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;q1&quot; value=&quot;third&quot;&gt;Funktionen können eine Eingaben und optionale Ausgaben haben.&lt;br&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;&lt;hr&gt;Frage 2.&lt;br&gt;Welcher Befehl erlaubt das Zugreifen auf die letzten fünf Zeichen von einer Stringvariable genannt &quot;satz&quot; ?&lt;br&gt;&lt;/b&gt;&lt;blockquote&gt;&lt;input type=&quot;radio&quot; name=&quot;q2&quot; value=&quot;first&quot;&gt;satz[-5:]&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;q2&quot; value=&quot;second&quot;&gt;satz[5:]&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;q2&quot; value=&quot;thrid&quot;&gt;satz.get(5}&lt;br&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;&lt;hr&gt;&lt;input type=&quot;button&quot;value=&quot;Einreichen&quot;onClick=&quot;getScore(this.form);&quot;&gt;&lt;input type=&quot;reset&quot; value=&quot;Auswahl löschen&quot;&gt;&lt;p&gt;Von 2 Fragen sind richtig: &lt;input type=text size 15 name=&quot;mark&quot;&gt; Genauigkeit=&lt;input type=text size=15 name=&quot;percentage&quot;&gt;&lt;br&gt;&lt;/form&gt;&lt;p&gt;&lt;form method=&quot;post&quot; name=&quot;Form&quot; onsubmit=&quot;&quot; action=&quot;&quot;&gt;&lt;/form&gt;&lt;/body&gt;&lt;script&gt;var numQues=2;var numChoi=3;var answers=new Array(numQues);answers[0]=&quot;first&quot;;answers[1]=&quot;first&quot;;function getScore(form){var score=0;var currElt;var currSelection;for (i=0; i&lt;numQues; i++){currElt=i*numChoi;answered=false;for (j=0; j&lt;numChoi; j++){currSelection=form.elements[currElt + j];if (currSelection.checked){answered=true;if (currSelection.value==answers[i]){score++;break;}}}if (answered===false){alert(&quot;Bitte alle Fragen beantworten!&quot;) ;return false;}}var scoreper=Math.round(score/numQues*100);form.percentage.value=scoreper + &quot;%&quot;;form.mark.value=score;}&lt;/script&gt;
 </pre></div>
 
      </div>
@@ -15635,7 +15432,7 @@ Steak 15.99
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<script>var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[25])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();</script>Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); return false;" >hier</a>.<center><h1>Single Choice Fragen</h1></center><p><form name="quiz"><p><b>Frage 1.<br>Welche Funktion hängt eine Liste an eine weitere ohne diese aufzulösen?<br></b><blockquote><input type="radio" name="q1" value="extend">extend()<br><input type="radio" name="q1" value="append">append()<br><input type="radio" name="q1" value="insert">insert()<br></blockquote><p><b><hr>Frage 2.<br>Welcher Befehl lässt es zu, gleichzeitig einen index zu generieren und über zwei Listen zu iterieren?<br></b><blockquote><input type="radio" name="q2" value="zip">for x,y in enumerate(list1,liste2)<br><input type="radio" name="q2" value="zipenumerate">for i,x,y in zip(enumerate(liste1,liste2))<br><input type="radio" name="q2" value="tuplezipenumerate">for i,(x,y) in enumerate(zip(liste1,liste2))<br></blockquote><p><b><hr><input type="button"value="Einreichen"onClick="getScore(this.form);"><input type="reset" value="Auswahl löschen"><p>Von 2 Fragen sind richtig: <input type=text size 15 name="mark"> Genauigkeit=<input type=text size=15 name="percentage"><br></form><p><form method="post" name="Form" onsubmit="" action=""></form></body><script>var numQues=2;var numChoi=3;var answers=new Array(numQues);answers[0]="append";answers[1]="tuplezipenumerate";function getScore(form){var score=0;var currElt;var currSelection;for (i=0; i<numQues; i++){currElt=i*numChoi;answered=false;for (j=0; j<numChoi; j++){currSelection=form.elements[currElt + j];if (currSelection.checked){answered=true;if (currSelection.value==answers[i]){score++;break;}}}if (answered===false){alert("Bitte alle Fragen beantworten!") ;return false;}}var scoreper=Math.round(score/numQues*100);form.percentage.value=scoreper + "%";form.mark.value=score;}</script>
+<script>var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[20])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[20])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();</script>Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); return false;" >hier</a>.<center><h1>Single Choice Fragen</h1></center><p><form name="quiz"><p><b>Frage 1.<br>Welche der folgenden Aussagen stimmt über Funktionen?<br></b><blockquote><input type="radio" name="q1" value="first">Funktionen können mehrere Eingaben und Ausgaben haben.<br><input type="radio" name="q1" value="second">Funktionen können eine Ein- und Ausgabe haben.<br><input type="radio" name="q1" value="third">Funktionen können eine Eingaben und optionale Ausgaben haben.<br></blockquote><p><b><hr>Frage 2.<br>Welcher Befehl erlaubt das Zugreifen auf die letzten fünf Zeichen von einer Stringvariable genannt "satz" ?<br></b><blockquote><input type="radio" name="q2" value="first">satz[-5:]<br><input type="radio" name="q2" value="second">satz[5:]<br><input type="radio" name="q2" value="thrid">satz.get(5}<br></blockquote><p><b><hr><input type="button"value="Einreichen"onClick="getScore(this.form);"><input type="reset" value="Auswahl löschen"><p>Von 2 Fragen sind richtig: <input type=text size 15 name="mark"> Genauigkeit=<input type=text size=15 name="percentage"><br></form><p><form method="post" name="Form" onsubmit="" action=""></form></body><script>var numQues=2;var numChoi=3;var answers=new Array(numQues);answers[0]="first";answers[1]="first";function getScore(form){var score=0;var currElt;var currSelection;for (i=0; i<numQues; i++){currElt=i*numChoi;answered=false;for (j=0; j<numChoi; j++){currSelection=form.elements[currElt + j];if (currSelection.checked){answered=true;if (currSelection.value==answers[i]){score++;break;}}}if (answered===false){alert("Bitte alle Fragen beantworten!") ;return false;}}var scoreper=Math.round(score/numQues*100);form.percentage.value=scoreper + "%";form.mark.value=score;}</script>
 
 </div>
 
@@ -15648,20 +15445,26 @@ Steak 15.99
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Zusammenfassung:">Zusammenfassung:<a class="anchor-link" href="#Zusammenfassung:">&#182;</a></h2><ul>
-<li>Erweiterte Variablentypen erleichtern oft die Programmierung mit mehr als einer Variable.</li>
-<li>Jeder Variablentyp kommt mit vordefinierten Methoden.</li>
-<li>Alle erweiterten Variablentypen haben bestimmte Eigenschaften und damit Vor- und Nachteile.</li>
-<li>Oft sind erweiterte Variablentypen austauschbar und es ist im Sinne des Programmierers zu entscheiden welcher Typ optimalerweise genutzt werden sollte.</li>
-<li>Meist verbreitet ist allerdings die Liste und das Dictionary. </li>
+<h1 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung">&#182;</a></h1><ul>
+<li>Variablen speichern Informationen</li>
+<li>Der Datentyp wird wenn nicht anders definiert impliziert zugewiesen. </li>
+<li>Operatoren sind Kürzel für einfache Befehle.</li>
+<li>Mit dem Import Statement wird das Programm durch ein Modul erweitert. </li>
+<li>Funktionen enthalten Programmlogik, die entweder vorhanden, importiert oder selst implementiert werden kann. </li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Quellen:">Quellen:<a class="anchor-link" href="#Quellen:">&#182;</a></h2><ul>
-<li><a href="https://docs.python.org/3/tutorial/datastructures.html">https://docs.python.org/3/tutorial/datastructures.html</a></li>
+<h2 id="Quellen-und-Weiterf&#252;hrendes">Quellen und Weiterf&#252;hrendes<a class="anchor-link" href="#Quellen-und-Weiterf&#252;hrendes">&#182;</a></h2><ul>
+<li><a href="https://docs.python.org/3/tutorial/introduction.html">https://docs.python.org/3/tutorial/introduction.html</a></li>
+<li><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">https://docs.python.org/3/tutorial/controlflow.html#defining-functions</a> </li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html">https://docs.python.org/3/library/stdtypes.html</a> </li>
+<li><a href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a>  </li>
+<li><a href="https://docs.python.org/3/library/functions.html#complex">https://docs.python.org/3/library/functions.html#complex</a> </li>
+<li><a href="https://docs.python.org/3/reference/import.html">https://docs.python.org/3/reference/import.html</a>
+-<a href="https://www.educba.com/string-operators-in-python/">https://www.educba.com/string-operators-in-python/</a></li>
 </ul>
 
 </div>
