@@ -15,15 +15,15 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 <b>Frage 1.
 
-<br>Welche der folgenden Aussagen stimmt über Funktionen?<br></b>
+<br>Mit welchem Code ist es möglich von Null bis Zehn zu iterieren?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q1" value="first">Funktionen können mehrere Eingaben und Ausgaben haben.<br>
+<input type="radio" name="q1" value="first">for i in 0 to 10 <br>
 
-<input type="radio" name="q1" value="second">Funktionen können eine Ein- und Ausgabe haben.<br>
+<input type="radio" name="q1" value="second">for i in range(10)<br>
 
-<input type="radio" name="q1" value="third">Funktionen können eine Eingaben und optionale Ausgaben haben.<br>
+<input type="radio" name="q1" value="third">for i in enumerate(10)<br>
 
 </blockquote>
 
@@ -33,15 +33,15 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 Frage 2.
 
-<br>Welcher Befehl erlaubt das Zugreifen auf die letzten fünf Zeichen von einer Stringvariable genannt "satz" ?<br></b>
+<br>Welcher Befehl erlaubt das Überspringen des aktuellen Schleifendurchlaufs?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q2" value="first">satz[-5:]<br>
+<input type="radio" name="q2" value="first">next<br>
 
-<input type="radio" name="q2" value="second">satz[5:]<br>
+<input type="radio" name="q2" value="second">break<br>
 
-<input type="radio" name="q2" value="thrid">satz.get(5}<br>
+<input type="radio" name="q2" value="third">continue<br>
 
 </blockquote>
 
@@ -75,8 +75,8 @@ var numChoi = 3;
 
 var answers = new Array(numQues);
 
-answers[0] = "first";
-answers[1] = "first";
+answers[0] = "second";
+answers[1] = "third";
 
 function getScore(form) {
 
