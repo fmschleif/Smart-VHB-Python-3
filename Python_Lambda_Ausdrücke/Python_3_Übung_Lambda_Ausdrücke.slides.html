@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Python_3_Lambda_Ausdrücke slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Python_3_Übung_Lambda_Ausdrücke slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14385,7 +14385,7 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-3-Lambda-Ausdr&#252;cke">Python 3 Lambda Ausdr&#252;cke<a class="anchor-link" href="#Python-3-Lambda-Ausdr&#252;cke">&#182;</a></h1>
+<h1 id="&#220;bungen-Python-3-Kontrollstrukturen">&#220;bungen Python 3 Kontrollstrukturen<a class="anchor-link" href="#&#220;bungen-Python-3-Kontrollstrukturen">&#182;</a></h1>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14396,69 +14396,16 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Lernziele">Lernziele<a class="anchor-link" href="#Lernziele">&#182;</a></h2><ul>
-<li>Lambda Ausdrücke können erkannt und implementiert werden.</li>
-<li>Die Abgrenzung zwischen Lambda Ausdrücken und Python-Funktionen kann definiert werden.</li>
-<li>Sogenannte High-Order Functions können erkannt und implementiert werden.</li>
-<li>Anwendung der Built-In High-Order Functions von Python.</li>
-<li>Coding Guidelines für Lambda Ausdrücke können benannt werden.   </li>
-</ul>
+<h2 id="&#220;bung-1:">&#220;bung 1:<a class="anchor-link" href="#&#220;bung-1:">&#182;</a></h2><p>Implementieren Sie eine Lambda Expression, sodass die n-th Wurzel berechnet wird. Wird der Lambda Expression für das Wurzel ziehen nur eine Zahl, aber keinen Grad, soll der Wert 2 verwendet werden.</p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Vorkenntnisse">Vorkenntnisse<a class="anchor-link" href="#Vorkenntnisse">&#182;</a></h2><ul>
-<li>Grundlagen in Mathematik </li>
-<li>Python 3 Kenntnisse in<ul>
-<li>Variablen und Operatoren</li>
-<li>Kontrollstrukturen</li>
-<li>Erweiterte Variablentypen (Datenstrukturen)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Zielgruppe">Zielgruppe<a class="anchor-link" href="#Zielgruppe">&#182;</a></h2><ul>
-<li>Studierende in naturwissenschaftlichen Studiengängen</li>
-<li>Studierende in Ingenieurstudiengängen </li>
-<li>Studierende mit anderweitigem naturwissenschaftlichen/technischen Hintergrund</li>
-<li>Studierende mit ersten Erfahrungen in anderen Programmiersprachen</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Aufbau">Aufbau<a class="anchor-link" href="#Aufbau">&#182;</a></h2><ul>
-<li>Lambda Expressions (Ausdrücke) vs. Funktionen</li>
-<li>Programmabläufe in Lambda Expressions</li>
-<li>Named Lambda Expressions</li>
-<li>High-Order Functions</li>
-<li>Coding Guidelines</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Lambda-Expresssion-(Ausdr&#252;cke)-und--Funktionen">Lambda Expresssion (Ausdr&#252;cke) und  Funktionen<a class="anchor-link" href="#Lambda-Expresssion-(Ausdr&#252;cke)-und--Funktionen">&#182;</a></h2><h2 id="Ein-Vergleich">Ein Vergleich<a class="anchor-link" href="#Ein-Vergleich">&#182;</a></h2>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Identity-Funktion gibt einfach das Funktionsargument x zurück.</span>
-<span class="k">def</span> <span class="nf">identity</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> 
-
-<span class="n">identity</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Integer 5 in</span>
-<span class="c1"># Integer 5 out</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ihre Lösung</span>
 </pre></div>
 
      </div>
@@ -14466,584 +14413,18 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>5</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Syntax">Syntax<a class="anchor-link" href="#Syntax">&#182;</a></h2><p>Die Syntax von Lambda Expressions ist vergleichbar mit der Syntax von Funktionen:&lt;/br&gt;
-<code>lambda &lt;Funktionsargument&gt; : &lt;Code&gt;</code></p>
-<p>Dabei ist <code>lambda</code> ein reserviertes Keyword von Python selbst. <code>&lt;Funktionsargument&gt;</code> und <code>&lt;Code&gt;</code> werden vom Entwickler festgelegt. Allerdings darf <code>&lt;Code&gt;</code> nicht länger als eine Programmzeile sein.&lt;/br&gt;</p>
-<p>Wenn die Definition, Argumentübergabe und Ausführung von Lambda alles in einer Zeile definiert wird, müssen Klammern verwendet werden:&lt;/br&gt;
-<code>(lambda &lt;Funktionsargument&gt; : &lt;Code&gt;) (&lt;Funktionsargument&gt;)</code>&lt;/br&gt;
-Dies wird als "Immediately Invoked Function Expression" (IIFE) bezeichnet.</p>
-
-</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lambda-Aquivalent zu der Identity Funktions </span>
-<span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">)(</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1"># Erste Klammer definiert die Lambda Funktion.</span>
-<span class="c1"># Zweite Klammer definiert den Input der Lambda Funktion. </span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>5</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Lambda Ausdrücke oder auch Expressions genannt sind so genannte anonyme Funktionen. Anonyme deshalb, da sie auch ohne Bezeichner definiert und ausgeführt werden dürfen.</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Logik-in-Lambda-Expressions">Logik in Lambda Expressions<a class="anchor-link" href="#Logik-in-Lambda-Expressions">&#182;</a></h2><ul>
-<li>Lambda Expressions können Logik, Abläufe oder Berechnungen kapseln.</li>
-<li>Innerhalb von Lambda Expressions können Funktionen geschachtelt werden</li>
-</ul>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mul_two</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">mul_two</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>6
-6
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Named-Lambda-Expression">Named Lambda Expression<a class="anchor-link" href="#Named-Lambda-Expression">&#182;</a></h2><p>Lambda Expressions können auch wie Funkionen benannt werden. Dadurch können sie wiederverwendet werden. Named Lambda Expressions werden vom Python-Compiler als Funktion interpretiert</p>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Funktion mit einer geschachtelten Funktion</span>
-<span class="k">def</span> <span class="nf">add_one_print</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Berechnung und </span>
-               <span class="c1"># Funktionsaufruf in der Funktion </span>
-
-<span class="c1"># Lambda Äquivalent</span>
-<span class="n">add_one_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">add_one_lambda</span><span class="p">))</span> <span class="c1"># Gib den Typ hinter Bezeichner add_one_lambda aus</span>
-<span class="n">add_one_print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Funktionsaufruf</span>
-<span class="n">add_one_lambda</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Named Lambda Expression Aufruf</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;function&#39;&gt;
-6
-6
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Lambda-Expressions-mit-mehreren-Parametern">Lambda Expressions mit mehreren Parametern<a class="anchor-link" href="#Lambda-Expressions-mit-mehreren-Parametern">&#182;</a></h2><p>Die Syntax mit mehreren Parametern ist wieder vergleichbar zu Funktionen:</p>
-<p><code>lambda &lt;Funktionsargument1&gt;,&lt;Funktionsargument2&gt; : &lt;Code&gt;</code></p>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel n-the Potenz mit Standardwert 2. </span>
-<span class="c1"># Wenn nichts weiter übergeben, wird der Wert 2 verwendet.</span>
-<span class="n">nthpower</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="n">n</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">nthpower</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># Ausgabe von 4^2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nthpower</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># Ausgabe von 4^3</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>16
-64
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Weitere Beispiele von Lambda Expressions</span>
-
-<span class="c1"># Lambda Expression mit sogenanntem Named Argument </span>
-<span class="c1"># für die Variable x,y,z und einem Default-Wert für z = 3.</span>
-<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">+</span> <span class="n">z</span><span class="p">)</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="c1"># Lambda Expression welches *args erwarten.</span>
-<span class="c1"># *args ist ein Iterator und erwartet </span>
-<span class="c1"># beliebig viele Funktionsargumente</span>
-<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span> <span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">))</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span> <span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">))</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>6
-6
-10
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Synonyme-zu-Lambda-Expression">Synonyme zu Lambda Expression<a class="anchor-link" href="#Synonyme-zu-Lambda-Expression">&#182;</a></h2><p>In der Python-Community haben sich für die Lambda Expressions verschiedene Synonyme etabliert. So werden die folgenden Begriffe synonym behandelt:</p>
-<ul>
-<li>Lambda Functions </li>
-<li>Lambda Expressions</li>
-<li>Lambda Abstractions</li>
-<li>Lambda Forms</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="High-Order-Functions">High Order Functions<a class="anchor-link" href="#High-Order-Functions">&#182;</a></h2><p>Eine sogenannte "Higher Order Function" ist eine Funktion die entweder eine oder mehrere Funktionen als Funktionsargument erwartet oder eine oder mehrere Funktionen zurück gibt.</p>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel</span>
-
-<span class="n">ho_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># Zweites Funktionsargument ist eine Funktion.</span>
-<span class="c1"># Daher erwartet ho_func entweder eine Funkion </span>
-<span class="c1"># oder eine andere Lambda Expression.</span>
-<span class="k">def</span> <span class="nf">secpow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="c1"># Funktion</span>
-<span class="n">secpow_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>  <span class="c1"># Lambda Expression</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ho_func</span><span class="p">(</span><span class="mi">2</span> <span class="p">,</span> <span class="n">secpow</span> <span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ho_func</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">secpow_lambda</span><span class="p">))</span>
-<span class="c1"># Funktionen werden ohne Klammern übergeben.</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>6
-6
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Standard-Higher-Order-Functions">Standard Higher Order Functions<a class="anchor-link" href="#Standard-Higher-Order-Functions">&#182;</a></h1><p>Die Python Programmiersprache bietet standardmäßig sogenannte "built-in" Higher Order Functions an. Beispielsweise</p>
-<ul>
-<li>map() =&gt; Wendet übergebene Funktion auf übergebe Variable an</li>
-<li>filter() =&gt; Filter übergebene Variable via übergebene Funktion</li>
-<li>sort() =&gt; Sortiert eine Liste</li>
-<li>all() = &gt; Gibt True zurück, wenn alle Elemente übergebenen Argumente True sind sonst False.</li>
-<li>min() =&gt; Gibt kleinste Zahl einer Liste zurück</li>
-<li>max() =&gt; Gibt größte Zahl einer Liste zurück</li>
-</ul>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel Map</span>
-<span class="n">numbs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">*</span><span class="n">x</span> 
-<span class="n">squared</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span><span class="n">numbs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">squared</span><span class="p">)</span> <span class="c1"># Gibt Map Iterator zurück</span>
-
-<span class="c1"># Konvertiert Iterator zu Liste.</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">squared</span><span class="p">))</span> 
-<span class="c1"># Wichtig: Map wird erst zu dieser Zeit ausgeführt!</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;map object at 0x7f8d704a3350&gt;
-[4, 16, 36]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel Filter </span>
-<span class="n">numbs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span> <span class="p">,</span><span class="mi">3</span> <span class="p">,</span><span class="mi">4</span> <span class="p">,</span><span class="mi">5</span> <span class="p">,</span><span class="mi">6</span> <span class="p">,</span><span class="mi">7</span> <span class="p">,</span><span class="mi">8</span> <span class="p">]</span>
-<span class="k">def</span> <span class="nf">check_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
-    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span><span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">check_even</span><span class="p">,</span><span class="n">numbs</span><span class="p">)))</span>
-<span class="c1"># Alle Schritte in einer Zeile zusammengefasst.</span>
-<span class="c1"># Filter, Iterator, Konvertierung zur Liste und Ausgabe.</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[2, 4, 6, 8]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel für das Filtern mit If-Else Kontrollstruktur</span>
-<span class="c1"># Dabei ist die Syntax der If-Else Abfrage gleich zur </span>
-<span class="c1"># Syntax bei der Erstellung der einer Variablen.</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;a&#39;</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">5</span> <span class="k">else</span> <span class="s1">&#39;b&#39;</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;b&#39;, &#39;b&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Coding-Guidelines">Coding Guidelines<a class="anchor-link" href="#Coding-Guidelines">&#182;</a></h2><ul>
-<li>Zwar können Lambda Expressions vielfältig eingesetzt werden, allerdings gibt es einiges zu beachten, da sonst das nachträgliche Verstehen und das Debugging schwierig wird. </li>
-<li>Daher sollten Lambda Expressions nur gezielt eingesetzt werden</li>
-</ul>
-<p>Nachfolgend einige Beispiele die es zu vermeiden gilt.</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Guideline-Documentation">Guideline Documentation<a class="anchor-link" href="#Guideline-Documentation">&#182;</a></h2><ul>
-<li>Lambda Expressions können nicht wie üblich Dokumentiert werden.</li>
-<li>D.h. das Docstring Element fehlt und daher kann Beispielsweise eine IDE keine Dokumentation von Lambda Expression aufrufen. </li>
-<li>Des Weiteren fehlt jedem Dritten die Information über die Funktionalität.</li>
-<li>Daher sollte die Lambda Expression selbsterklärend sein.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Guideline-Exception">Guideline Exception<a class="anchor-link" href="#Guideline-Exception">&#182;</a></h2><ul>
-<li>Da Lambda Expressions nicht gut debuggt werden können, sollten sie daher nicht zum werfen eine Expection verwendet werden. </li>
-<li>Dritte werden Probleme haben, die Fehlermeldung korrekt nachzuvollziehen und einen möglichen Fehler zu beheben.</li>
-<li>Beispielsweise sollte folgendes vermieden werden:&lt;/br&gt;
-<code>def throw(ex): raise ex</code>&lt;/br&gt;
-<code>(lambda: throw(Exception('Something bad happened')))()</code> </li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Guideline-Kryptische-Funktion">Guideline Kryptische Funktion<a class="anchor-link" href="#Guideline-Kryptische-Funktion">&#182;</a></h2><ul>
-<li>Da Lambda Expressions nicht dokumentiert werden können muss klar sein:<ul>
-<li>Usecase</li>
-<li>und  Funktionalität</li>
-</ul>
-</li>
-<li>Komplizierte Berechnungen oder Programmlogik sollten daher in eine Funktion geschrieben werden.  </li>
-</ul>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel Kryptische Lambda Expression</span>
-<span class="c1"># Das Underscore (_) ermöglicht das Verwenden einer Variablen ohne Namen.</span>
-<span class="c1"># Dies erschwert Nachvollziehbarkeit.</span>
-<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">_</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">_</span><span class="p">)))</span>
-    <span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Komplizierte Rechnungen sollten in eine Funktion, da sonst nicht richtig Dokumentiert. </span>
-<span class="c1"># Demonstriert im folgendem Beispiel zur Berechnung eines Gaussian Kernels mit der Zahl 2.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unsere Lösung</span>
 <span class="kn">import</span> <span class="nn">math</span>
-<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="p">(</span><span class="n">_</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.5</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">_</span><span class="p">)))([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span>
+<span class="n">nthsqrt</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthsqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># Mit übergrade des Wurzelgrads</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthsqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># Standardwert 2 </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthsqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># Überprüfen ob Standardwert richtig.</span>
 </pre></div>
 
      </div>
@@ -15063,7 +14444,9 @@ Dies wird als "Immediately Invoked Function Expression" (IIFE) bezeichnet.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[0.6411803884299546, 1.0, 1.5596234976067807, 2.4324254542872077, 3.7936678946831774, 5.916693590664329, 9.227814352139525, 14.391916095149892, 22.445970517581, 35.00726304580835]
+<pre>1.2599210498948732
+1.4142135623730951
+1.4142135623730951
 </pre>
 </div>
 </div>
@@ -15072,14 +14455,40 @@ Dies wird als "Immediately Invoked Function Expression" (IIFE) bezeichnet.</p>
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#220;bung-2:">&#220;bung 2:<a class="anchor-link" href="#&#220;bung-2:">&#182;</a></h2><p>Implementieren Sie einen Lambda Ausdruck mit einem Standardfunktionsargument x = 2 und beliebig viele weitere Argumente. Die Funktion soll den Logarithmus zur Basis x für alle weiteren Argumente berechnen und als Liste zurückgeben.</p>
+
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ihre Lösung</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="kd">var</span> <span class="nx">code_show</span><span class="o">=!</span><span class="mf">1</span><span class="p">;</span><span class="kd">function</span> <span class="nx">code_toggle</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">,</span><span class="nx">d</span><span class="p">;</span><span class="nx">code_show</span><span class="o">?</span><span class="p">(</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;</span><span class="p">)[</span><span class="mf">12</span><span class="p">])</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">),</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div.cell.code_cell.rendered.selected div.input&quot;</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">:</span><span class="p">(</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;jp-CodeMirrorEditor jp-Editor jp-InputArea-editor&quot;</span><span class="p">)[</span><span class="mf">12</span><span class="p">])</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">),</span><span class="kc">null</span><span class="o">!=</span><span class="p">(</span><span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div.cell.code_cell.rendered.selected div.input&quot;</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">));</span><span class="nx">code_show</span><span class="o">=!</span><span class="nx">code_show</span><span class="p">}</span><span class="nx">code_toggle</span><span class="p">();&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>Zum Anzeigen des verwendeten Javascript klicken Sie <span class="p">&lt;</span><span class="nt">a</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;code_toggle(); return false;&quot;</span> <span class="p">&gt;</span>hier<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Single Choice Fragen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;quiz&quot;</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Frage 1.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Welche der folgenden Aussagen stimmt über Lambda Expressions?<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;first&quot;</span><span class="p">&gt;</span>Sind immer selbsterklärend.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;second&quot;</span><span class="p">&gt;</span>High Order Functions können mit ihnen kombiniert werden.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;third&quot;</span><span class="p">&gt;</span>Lambda Expressions eignen sich für Exceptions.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>Frage 2.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Welche der folgenden Codezeilen stimmt?<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;first&quot;</span><span class="p">&gt;</span>(lambda x,y : x * y)(x=2,3)<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;second&quot;</span><span class="p">&gt;</span>(lambda x,y : x * y)(2,y=3)<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;thrid&quot;</span><span class="p">&gt;</span>(lambda x,y : x * y)(2)<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">hr</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="na">value</span><span class="o">=</span><span class="s">&quot;Einreichen&quot;</span><span class="na">onClick</span><span class="o">=</span><span class="s">&quot;getScore(this.form);&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;reset&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Auswahl löschen&quot;</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Von 2 Fragen sind richtig: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">size</span> <span class="na">15</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mark&quot;</span><span class="p">&gt;</span> Genauigkeit=<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">size</span><span class="o">=</span><span class="s">15</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;percentage&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Form&quot;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="kd">var</span> <span class="nx">numQues</span><span class="o">=</span><span class="mf">2</span><span class="p">;</span><span class="kd">var</span> <span class="nx">numChoi</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="kd">var</span> <span class="nx">answers</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">numQues</span><span class="p">);</span><span class="nx">answers</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;second&quot;</span><span class="p">;</span><span class="nx">answers</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;second&quot;</span><span class="p">;</span><span class="kd">function</span> <span class="nx">getScore</span><span class="p">(</span><span class="nx">form</span><span class="p">){</span><span class="kd">var</span> <span class="nx">score</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">currElt</span><span class="p">;</span><span class="kd">var</span> <span class="nx">currSelection</span><span class="p">;</span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">numQues</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="nx">currElt</span><span class="o">=</span><span class="nx">i</span><span class="o">*</span><span class="nx">numChoi</span><span class="p">;</span><span class="nx">answered</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="k">for</span> <span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">numChoi</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span><span class="nx">currSelection</span><span class="o">=</span><span class="nx">form</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">currElt</span> <span class="o">+</span> <span class="nx">j</span><span class="p">];</span><span class="k">if</span> <span class="p">(</span><span class="nx">currSelection</span><span class="p">.</span><span class="nx">checked</span><span class="p">){</span><span class="nx">answered</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span><span class="k">if</span> <span class="p">(</span><span class="nx">currSelection</span><span class="p">.</span><span class="nx">value</span><span class="o">==</span><span class="nx">answers</span><span class="p">[</span><span class="nx">i</span><span class="p">]){</span><span class="nx">score</span><span class="o">++</span><span class="p">;</span><span class="k">break</span><span class="p">;}}}</span><span class="k">if</span> <span class="p">(</span><span class="nx">answered</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Bitte alle Fragen beantworten!&quot;</span><span class="p">)</span> <span class="p">;</span><span class="k">return</span> <span class="kc">false</span><span class="p">;}}</span><span class="kd">var</span> <span class="nx">scoreper</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">score</span><span class="o">/</span><span class="nx">numQues</span><span class="o">*</span><span class="mf">100</span><span class="p">);</span><span class="nx">form</span><span class="p">.</span><span class="nx">percentage</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">scoreper</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">;</span><span class="nx">form</span><span class="p">.</span><span class="nx">mark</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">score</span><span class="p">;}&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unsere Lösung</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># Liste wird mit der sogenannten List Comprehension erstellt.</span>
+<span class="n">nthlog</span> <span class="o">=</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span> <span class="p">]</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthlog</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthlog</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nthlog</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15098,12 +14507,12 @@ Dies wird als "Immediately Invoked Function Expression" (IIFE) bezeichnet.</p>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<script>var code_show=!1;function code_toggle(){var e,d;code_show?(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[12])&&(e.style.display=""),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="")):(null!=(e=document.getElementsByClassName("jp-CodeMirrorEditor jp-Editor jp-InputArea-editor")[12])&&(e.style.display="none"),null!=(d=document.querySelector("div.cell.code_cell.rendered.selected div.input"))&&(d.style.display="none"));code_show=!code_show}code_toggle();</script>Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); return false;" >hier</a>.<center><h1>Single Choice Fragen</h1></center><p><form name="quiz"><p><b>Frage 1.<br>Welche der folgenden Aussagen stimmt über Lambda Expressions?<br></b><blockquote><input type="radio" name="q1" value="first">Sind immer selbsterklärend.<br><input type="radio" name="q1" value="second">High Order Functions können mit ihnen kombiniert werden.<br><input type="radio" name="q1" value="third">Lambda Expressions eignen sich für Exceptions.<br></blockquote><p><b><hr>Frage 2.<br>Welche der folgenden Codezeilen stimmt?<br></b><blockquote><input type="radio" name="q2" value="first">(lambda x,y : x * y)(x=2,3)<br><input type="radio" name="q2" value="second">(lambda x,y : x * y)(2,y=3)<br><input type="radio" name="q2" value="thrid">(lambda x,y : x * y)(2)<br></blockquote><p><b><hr><input type="button"value="Einreichen"onClick="getScore(this.form);"><input type="reset" value="Auswahl löschen"><p>Von 2 Fragen sind richtig: <input type=text size 15 name="mark"> Genauigkeit=<input type=text size=15 name="percentage"><br></form><p><form method="post" name="Form" onsubmit="" action=""></form></body><script>var numQues=2;var numChoi=3;var answers=new Array(numQues);answers[0]="second";answers[1]="second";function getScore(form){var score=0;var currElt;var currSelection;for (i=0; i<numQues; i++){currElt=i*numChoi;answered=false;for (j=0; j<numChoi; j++){currSelection=form.elements[currElt + j];if (currSelection.checked){answered=true;if (currSelection.value==answers[i]){score++;break;}}}if (answered===false){alert("Bitte alle Fragen beantworten!") ;return false;}}var scoreper=Math.round(score/numQues*100);form.percentage.value=scoreper + "%";form.mark.value=score;}</script>
-
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[0.0, 1.0, 1.5849625007211563, 2.321928094887362, 2.584962500721156]
+[0.0, 1.0, 1.5849625007211563, 2.321928094887362, 2.584962500721156]
+[0.0, 0.5, 0.7924812503605781, 1.160964047443681, 1.292481250360578]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -15113,28 +14522,65 @@ Dies wird als "Immediately Invoked Function Expression" (IIFE) bezeichnet.</p>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung">&#182;</a></h1><ul>
-<li>Lambda Expressions kapseln Programmlogik ohne dafür eine Funktion definieren zu müssen.<ul>
-<li>Sind daher Funktionen in Syntax und Funktionsweise sehr ähnlich.</li>
-</ul>
-</li>
-<li>Mit Built-In Funktionen wie map oder filter können dadurch sehr klar und schnell, große Funktionsabläufe programmiert werden.</li>
-<li>Allerdings muss darauf geachtet werden, dass die Lambda Expression gut dokumentiert oder selbsterklärend ist. </li>
-<li>Wenn der Programmablauf nicht in eine Codezeile des Editors passt, sollte eine eigene Funktion implementiert werden. </li>
-<li>Abschließend sollten Lambdas nicht für Exceptions verwendet werden, da sie schwer zu Debuggen sind.  </li>
-</ul>
+<h2 id="&#220;bung-3:">&#220;bung 3:<a class="anchor-link" href="#&#220;bung-3:">&#182;</a></h2><p>Filtern Sie alle Primzahlen aus einer Liste von 2 bis 100 über Lambda und Built-In Funktionen. Das Ergebnis soll eine Liste mit allen Primzahlen im Zahlenbereich sein.</p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Quellen-und-Weiterf&#252;hrendes">Quellen und Weiterf&#252;hrendes<a class="anchor-link" href="#Quellen-und-Weiterf&#252;hrendes">&#182;</a></h2><ul>
-<li><a href="https://realpython.com/python-lambda">https://realpython.com/python-lambda</a></li>
-<li><a href="https://www.programiz.com/python-programming/methods/built-in/map">https://www.programiz.com/python-programming/methods/built-in/map</a> </li>
-<li><a href="https://www.programiz.com/python-programming/methods/built-in/filter">https://www.programiz.com/python-programming/methods/built-in/filter</a> </li>
-</ul>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ihre Lösung</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_prime</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">all</span><span class="p">(</span> <span class="n">x</span><span class="o">%</span><span class="k">i</span> != 0 for i in range(2, x ))
+<span class="c1"># all() ist eine Built-In Funktion die True zurück gibt,</span>
+<span class="c1"># wenn alle übergebenen Objekte True (1) sind ansonsten False.</span>
+<span class="c1"># Das heißt, wenn x%i == 0 ist die Bedingung für eine Primezahl </span>
+<span class="c1"># NICHT erfüllt. </span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="c1"># Definiere Zahlenbereich</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_prime</span><span class="p">,</span><span class="n">number</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+</pre>
+</div>
+</div>
 
 </div>
+
+</div>
+
 </div></section></section>
 </div>
 </div>
