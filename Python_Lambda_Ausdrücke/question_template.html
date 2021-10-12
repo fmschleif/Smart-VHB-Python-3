@@ -15,15 +15,16 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 <b>Frage 1.
 
-<br>Welche der folgenden Aussagen stimmt über Funktionen?<br></b>
+<br>Welche der folgenden Aussagen stimmt über Lambda Expressions?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q1" value="first">Funktionen können mehrere Eingaben und Ausgaben haben.<br>
+<input type="radio" name="q1" value="first">Sind immer selbsterklärend.<br>
 
-<input type="radio" name="q1" value="second">Funktionen können eine Ein- und Ausgabe haben.<br>
+<input type="radio" name="q1" value="second">High Order Functions können mit ihnen kombiniert werden.<br>
 
-<input type="radio" name="q1" value="third">Funktionen können eine Eingaben und optionale Ausgaben haben.<br>
+<input type="radio" name="q1" value="third">Lambda Expressions eignen sich für Exceptions.
+<br>
 
 </blockquote>
 
@@ -33,15 +34,15 @@ Zum Anzeigen des verwendeten Javascript klicken Sie <a onClick="code_toggle(); r
 
 Frage 2.
 
-<br>Welcher Befehl erlaubt das Zugreifen auf die letzten fünf Zeichen von einer Stringvariable genannt "satz" ?<br></b>
+<br>Welche der folgenden Codezeilen stimmt?<br></b>
 
 <blockquote>
 
-<input type="radio" name="q2" value="first">satz[-5:]<br>
+<input type="radio" name="q2" value="first">(lambda x,y : x * y)(x=2,3)<br>
 
-<input type="radio" name="q2" value="second">satz[5:]<br>
+<input type="radio" name="q2" value="second">(lambda x,y : x * y)(2,y=3)<br>
 
-<input type="radio" name="q2" value="thrid">satz.get(5}<br>
+<input type="radio" name="q2" value="thrid">(lambda x,y : x * y)(2)<br>
 
 </blockquote>
 
@@ -75,8 +76,8 @@ var numChoi = 3;
 
 var answers = new Array(numQues);
 
-answers[0] = "first";
-answers[1] = "first";
+answers[0] = "second";
+answers[1] = "second";
 
 function getScore(form) {
 
