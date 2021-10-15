@@ -1,0 +1,60 @@
+Grundsätzliche didaktischen Abgrenzung:
+Die Zielgruppe der Lerneinheiten (LE) von Prof. Dr. Barkowsky und die Zielgruppe unserer LE´n ist grundsätzlich disjunkt.
+Die von Ihm vorgeschlagenen LE´n zielen auf ein Publikum ab, das grundsätzlich wenig bis keine Kenntnisse
+im Bereich Programmierung hat. Daher ist die Wissensvermittlung und die Einführung von Begriffen eine andere.
+Unsere Zielgruppe sind Studierende der Naturwissenschaft die bereits Bezug zum Thema Programmieren haben.
+Daraus folgt, dass wir, wie in der Beschreibung der Lerneinheiten dargestellt, oft die Abgrenzung zu anderen
+Programmiersprachen wie Java suchen. Ohne grundsätzliche Kenntnisse im Thema Programmierung sind diese
+Abgrenzungen ziellos. Daher verstehen wir die Lerneinheiten von Prof. Dr. Barkowsky  als sinnvolle Ergänzung bzw.
+kann Grundlage für unsere sein.
+
+Grundsätzliche lernzielorientierten Abgrenzung:
+Des Weiteren ist das Lernziel unserer Lerneinheiten, dass Studierende die Fähigkeit erwerben im Anschluss im
+Bereich Data-Science und Machine Learning Kurse zu belegen die Python-Kenntnisse erfordern.
+Dieses Lernziel ist Basis für die Art der Wissensvermittlung, da wir diese komplett in sogenannten Jupyter-Notebooks
+gestalten werden. Dies ist in dem Bereich des naturwissenschaftliches Python-Programmierens üblich und zielt direkt
+auf die obengenannte anschließende Verwendung ab. Die LE´n von Prof. Dr. Barkowsky sind konzeptionell und bedienen sich
+verschiedener Stilelemente und Metaphern, um Konzepte darzustellen und zu Erklären. Da unsere Zielgruppe eine andere ist,
+können unsere Einheiten als eine "Hands-On" Einführung verstanden werden. Dieser Unterschied wird bei der Betrachtung der
+fertigen LE´n konsequent für die Studierenden sichtbar werden.
+
+Anmerkung zu sich wiederholenden Inhalten:
+Die Tatsache, dass sich Inhalte die unten nicht explizit abgegrenzt werden,
+wiederholen ist dem geschuldet, dass eigene Definitionen an der Stelle sinnvoll sind, um Studierende ein
+in sich abgeschlossen Definitions-Konstrukt innerhalb einer LE anbieten zu können die konsistent ist.
+Andere Definitionen und Inhalte sind daher nicht falsch oder obsolet sondern eine sinnvolle weitere Sichtweise
+auf die Thematik.
+ 
+Grundsätzliche inhaltliche Abgrenzung:
+Die Programmiersprache Python steht im IEEE Spektrum Vergleich 2020 an erster Stelle und hat somit Java, C und C++ überholt. Sie wird als einsteigerfreundlich eingestuft (LE´n von Herrn Prof. Dr. Barkowsky) und ist gleichzeitig Referenzsprache für mathematische Berechnungen, z.B.
+bei der NASA (LE`n von Herrn Prof. Dr. Schleif). Entsprechend groß ist auch das Interesse der Studierenden und Lehrenden verschiedenster Disziplinen, diese Sprache im Studium an Bayerns Hochschulen einzusetzen.
+Der Fokus auf den naturwissenschaftlichen Aspekt wurde bei der LE-Beschreibung von Prof. Dr. Frank-Michael Schleif mit dem Absatz „[…] Zielgruppe: Studierende in Naturwissenschaftlichen / Ingenieurstudiengängen […]“ berücksichtigt.
+Aufgrund der oben genannten Gründe, ist daher das koexistieren der verschieden Lerneinheiten von Herrn Prof. Dr. Schleif und vom Herrn Prof. Dr. Barkowsky eine sinnvolle Ergänzung in einem landesweiten virtuellen Repositorium.
+Neben der grundsätzlichen didaktischen und zielgruppenorientierten Abgrenzung der LE´n nun im nachfolgenden ein direkter inhaltlicher Vergleich, um die Unterschiede klar abzugrenzen.
+
+Inhaltliche Abgrenzung der einzelnen Lerneinheiten:
+Einführung in die Programmierung für Nebenfach: Python Funktionen und Rekursion (Prof. Dr. Barkowsky) und
+Einführung in die Programmierung für Nebenfach: Python Grundlagen (Prof. Dr. Barkowsky) im Vergleich zu
+Python 3: Variablen und Operatoren (Prof. Dr. Frank-Michael Schleif)
+Die LE´n von Prof. Dr. Barkowsky sind zu der von Prof. Dr. Frank-Michael Schleif unterschiedlich insofern unser Fokus auf der Anwendung im mathematische Bereich liegt.
+Dieser Bereich grenzt sich von der Software-Engineering-Perspektive, da Funktionen für Programmlogik und mathematische Funktionen differenziert zu betrachten sind.
+Die grundsätzliche Einführung von Variablen überschneidet sich zwar, allerdings sind wir zu dem Fazit gelangt, dass für eine in sich abgeschlossene LE zum Thema "Python Variablen" die Definition von Variablen erforderlich ist, um nicht nach der Begrüßung der Studierenden sofort auf eine andere LE im Repositorium verweisen zu müssen.
+
+Einführung in die Programmierung für Nebenfach: Python Kontrollstrukturen (Prof. Dr. Barkowsky) im Vergleich zu
+Python 3: Kontrollstrukturen (Prof. Dr. Frank-Michael Schleif)
+Aus der Beschreibung der LE von Prof. Dr. Barkowsky wird die Software-Engineering-Perspektive deutlich. Da es sich um Programmpfade (Variablen-Trace Digramm) und komplexe Schleifenkonstrukte handelt. Die von uns eingereichte Lerneinheit für Kontrollstrukturen, wie in der Beschreibung dargestellt, sieht die gezielte Manipulation von erweiterten Variablentypen (siehe unten) vor. Diese ist disjunkt und muss separat betrachtet werden, da die Kontrollstrukturen zwar grundsätzlich dieselben sind, die Anwendung allerdings eine andere ist und didaktisch gesehen nicht als Transfer-Leistung bei den Studenten garantiert werden kann.
+
+Einführung in die Programmierung für Nebenfach: Python Objektorientierung Klassen (Prof. Dr. Barkowsky) und
+Einführung in die Programmierung für Nebenfach: Python Objektorientierung Module und Strukturierung (Prof. Dr. Barkowsky) im Vergleich zu
+Python 3: Objektorientierung (Prof. Dr. Frank-Michael Schleif)
+Die zwei LE´n zum Thema Objektorientierung überschneiden sind nur bei der Einführung der Grundbegriffe. Hier kommt auch die didaktische Abgrenzungen zum Tragen,
+da Prof. Dr. Barkowsky sich aus der konzeptionellen und der Software-Engineering (UML-Diagramm) Sicht dem Thema Python-Objektorientierung nähert. Unsere Einführung wird Hands-On geschehen, aus der Perspektive von bereits existierenden Software-Frameworks (SciKit-Learn), mit dem Ziel diese zu verstehen und durch die Kenntnisse der Objektorientierung auch anwenden zu können.
+
+Python 3: Erweiterte Variablentypen:
+Die Thematik dieser LE wird von den LE´n von Prof. Dr. Barkowsky nicht in der für uns erforderlichen Tiefe abgedeckt. Die von Ihm benannten LE´n zum Thema "Funktionen und Rekursion" sowie "Grundlagen",
+werden erweitere Variablentypen wie Listen, Arrays und Dictionaries zwar ansprechen, aber nicht in der von uns vorgesehen Tiefe abdecken. Allerdings sind diese für naturwissenschaftliches Python-Programmieren essenzieller
+Bestandteil und sollten deshalb separat im Repositorium angeboten werden.
+
+Python 3: Lambda-Ausdrücke
+Die von uns eingereichte Lerneinheit "Lambda-Ausdrücke" besitzt keine inhaltliche Überschneidungen zu den LE's von Prof. Dr. Barkowsky.
+Um die Technik der Lambda-Ausdrücke richtig anwenden zu können, müssen die Grundbegriffe wie Schleifen, Variablen und Kontrollstrukturen bekannt sein, da sie darin verwendet werden. Daher kann es von den Begrifflichkeiten die in der Beschreibung vorkommen zwar ähnlich wirken. Die eigentliche Lerneinheit ist aus der inhaltlichen Perspektive aber überschneidungsfrei.
