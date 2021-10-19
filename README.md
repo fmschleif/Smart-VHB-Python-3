@@ -16,7 +16,7 @@ Course in german.
 3. [Erweiterte Variablentypen (Datenstrukturen)](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_Erweiterte_Variablentypen.ipynb)
 3.1 [Übungen](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_U%CC%88bung_Erweiterte_Variablentypen.ipynb)
 
-4. [Lambda Ausdrücke](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_Lambda_Ausdr%C3%BCcke.ipyn)
+4. [Lambda Ausdrücke](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_Lambda_Ausdr%C3%BCcke.ipynb)
 4.1 [Übungen](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_U%CC%88bung_Lambda_Ausdru%CC%88cke.ipynb)
 
 5. [Objektorientierung](https://github.com/ChristophRaab/Smart-VHB-Python-3/blob/main/Python_3_Objektorientierung.ipynb)
