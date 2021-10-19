@@ -14422,12 +14422,16 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unsere Lösung</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">62</span>
 <span class="n">teiler</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># Jede Zahl ist durch sich selbst teilbar, daher beginnt man bei x - 1.</span>
-<span class="k">while</span> <span class="n">teiler</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Jede Zahl ist durch eins teilbar, daher prüft man alle Zahlen bis inklusive zwei.</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">teiler</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># wWnn die Zahl x ganzzahlig mit dem derzeitigen Teiler teilbar ist, dann ...</span>
+<span class="k">while</span> <span class="n">teiler</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> 
+    <span class="c1">#Jede Zahl ist durch eins teilbar, daher prüft man alle Zahlen bis inklusive zwei.</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">teiler</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+        <span class="c1"># wWnn die Zahl x ganzzahlig mit dem derzeitigen Teiler teilbar ist, dann ...</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Der größte ganzzahlige Teiler ist &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">teiler</span><span class="p">))</span>
         <span class="k">break</span> <span class="c1"># Schleifenabbruch</span>
     <span class="n">teiler</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># Wenn nicht, dann Teiler runterzählen und erneut prüfen.</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># Wenn die While Schleife nicht durch break verlassen wurde und die Bedingung teiler &gt; 1 False ist, dann ...</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="c1"># Wenn die While Schleife nicht durch break verlassen wurde und die Bedingung:</span>
+    <span class="c1"># teiler &gt; 1 False ist, dann ...</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Der größte ganzzahlige Teiler ist 1&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14486,8 +14490,13 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Unsere Lösung </span>
 <span class="n">example</span> <span class="o">=</span> <span class="s2">&quot;Hallo Welt&quot;</span>
 <span class="n">reversed_example</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">example</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># len(example): Anzahl der Zeichen im String, range(): Start bei Anzahl -1 bis (0-1) in -1 Schritten. Wichtig!: in Python fangen Indizes bei 0 an, daher muss bei Start und Stop jeweils eins subtrahiert werden</span>
-    <span class="n">reversed_example</span> <span class="o">+=</span> <span class="n">example</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># Auslesen vom Zeichen an der speziellen Position und hinzufügen zu dem reversed_example</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">example</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+        <span class="c1"># len(example): Anzahl der Zeichen im String, range(): </span>
+        <span class="c1"># Start bei Anzahl -1 bis (0-1) in -1 Schritten.</span>
+        <span class="c1">#  Wichtig!: in Python fangen Indizes bei 0 an,</span>
+        <span class="c1">#  daher muss bei Start und Stop jeweils eins subtrahiert werden</span>
+    <span class="n">reversed_example</span> <span class="o">+=</span> <span class="n">example</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># Auslesen vom Zeichen</span>
+    <span class="c1"># an der speziellen Position und hinzufügen zu dem reversed_example</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">reversed_example</span><span class="p">)</span>
 </pre></div>
 
@@ -14547,11 +14556,16 @@ div.jp-OutputPrompt {
 <span class="n">summe_prim</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">summe_nicht_prim</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span> <span class="c1"># für alle Zahlen n in der Liste [2,3,4,5,...100]</span>
-     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># für alle Zahlen x in der Liste [2,...n] - hier bis maximal x = 99</span>
-         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Wenn die Zahl n durch den derzeitigen Teiler x ganzzahlig teilbar ist, dann ist n keine Primzahl</span>
+     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  
+         <span class="c1"># für alle Zahlen x in der Liste [2,...n]</span>
+         <span class="c1"># - hier bis maximal x = 99</span>
+         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+              <span class="c1"># Wenn die Zahl n durch den derzeitigen </span>
+             <span class="c1">#Teiler x ganzzahlig teilbar ist, dann ist n keine Primzahl</span>
              <span class="n">summe_nicht_prim</span> <span class="o">+=</span> <span class="n">n</span>
              <span class="k">break</span>
-     <span class="k">else</span><span class="p">:</span> <span class="c1"># Wenn die for Schleife nie durch break verlassen wurde, dann muss n eine Primzahl sein</span>
+     <span class="k">else</span><span class="p">:</span> <span class="c1"># Wenn die for Schleife nie durch break verlassen wurde,</span>
+           <span class="c1">#  dann muss n eine Primzahl sein</span>
          <span class="n">summe_prim</span> <span class="o">+=</span> <span class="n">n</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summe der Primzahlen: &quot;</span><span class="p">,</span> <span class="n">summe_prim</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summe der Nicht-Primzahlen: &quot;</span><span class="p">,</span> <span class="n">summe_nicht_prim</span><span class="p">)</span>
